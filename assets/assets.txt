@@ -1,0 +1,646 @@
+.gitkeep
+Arrow-Projectile/Arrow01(100x100).png
+Arrow-Projectile/Arrow01(32x32).png
+Arrow-Projectile/Arrow02(100x100).png
+Arrow-Projectile/Arrow02(32x32).png
+Arrow-Projectile/Arrow03(100x100).png
+Arrow-Projectile/Arrow03(32x32).png
+Characters/Archer/Archer/Archer-Attack01.png
+Characters/Archer/Archer/Archer-Attack02.png
+Characters/Archer/Archer/Archer-Death.png
+Characters/Archer/Archer/Archer-Hurt.png
+Characters/Archer/Archer/Archer-Idle.png
+Characters/Archer/Archer/Archer-Walk.png
+Characters/Archer/Archer/Archer.png
+Characters/Archer/Archer/Shadow sprites/Archer-Shadow.png
+Characters/Archer/Archer/Shadow sprites/Archer-Shadow_death.png
+Characters/Archer/Archer with shadows/Archer-Attack01.png
+Characters/Archer/Archer with shadows/Archer-Attack02.png
+Characters/Archer/Archer with shadows/Archer-Death.png
+Characters/Archer/Archer with shadows/Archer-Hurt.png
+Characters/Archer/Archer with shadows/Archer-Idle.png
+Characters/Archer/Archer with shadows/Archer-Walk.png
+Characters/Archer/Archer with shadows/Archer.png
+Characters/Archer/Archer(Split Effects)/Archer-Attack01_Effect.png
+Characters/Archer/Archer(Split Effects)/Archer-Attack02_Effect.png
+Characters/Archer/Archer(Split Effects)/Archer.png
+Characters/Archer/Arrow(projectile)/Arrow02(100x100).png
+Characters/Archer/Arrow(projectile)/Arrow02(32x32).png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman-Attack01.png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman-Attack02.png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman-Attack03.png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman-Death.png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman-Hurt.png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman-Idle.png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman-Walk.png
+Characters/Armored Axeman/Armored Axeman/Armored Axeman.png
+Characters/Armored Axeman/Armored Axeman/Shadow sprites/Armored Axeman-Shadow.png
+Characters/Armored Axeman/Armored Axeman/Shadow sprites/Armored Axeman-Shadow_attack02.png
+Characters/Armored Axeman/Armored Axeman/Shadow sprites/Armored Axeman-Shadow_death.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman-Attack01.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman-Attack02.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman-Attack03.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman-Death.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman-Hurt.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman-Idle.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman-Walk.png
+Characters/Armored Axeman/Armored Axeman with shadows/Armored Axeman.png
+Characters/Armored Axeman/Armored Axeman(Split Effects)/Armored Axeman-Attack01_Effect.png
+Characters/Armored Axeman/Armored Axeman(Split Effects)/Armored Axeman-Attack02_Effect.png
+Characters/Armored Axeman/Armored Axeman(Split Effects)/Armored Axeman-Attack03_Effect.png
+Characters/Armored Axeman/Armored Axeman(Split Effects)/Armored Axeman.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Attack01.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Attack02.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Attack03.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Block.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Death.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Hurt.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Idle.png
+Characters/Armored Orc/Armored Orc/Armored Orc-Walk.png
+Characters/Armored Orc/Armored Orc/Armored Orc.png
+Characters/Armored Orc/Armored Orc/Shadow sprites/Armored Orc-Shadow.png
+Characters/Armored Orc/Armored Orc/Shadow sprites/Armored Orc-Shadow_death.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Attack01.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Attack02.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Attack03.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Block.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Death.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Hurt.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Idle.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc-Walk.png
+Characters/Armored Orc/Armored Orc with shadows/Armored Orc.png
+Characters/Armored Orc/Armored Orc(Split Effects)/Armored Orc-Attack01_Effect.png
+Characters/Armored Orc/Armored Orc(Split Effects)/Armored Orc-Attack02_Effect.png
+Characters/Armored Orc/Armored Orc(Split Effects)/Armored Orc-Attack03_Effect.png
+Characters/Armored Orc/Armored Orc(Split Effects)/Armored Orc.png
+Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Attack01.png
+Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Attack02.png
+Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Death.png
+Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Hurt.png
+Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Idle.png
+Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton-Walk.png
+Characters/Armored Skeleton/Armored Skeleton/Armored Skeleton.png
+Characters/Armored Skeleton/Armored Skeleton/Shadow sprites/Armored Skeleton-Shadow.png
+Characters/Armored Skeleton/Armored Skeleton/Shadow sprites/Armored Skeleton-Shadow_death.png
+Characters/Armored Skeleton/Armored Skeleton with shadows/Armored Skeleton-Attack01.png
+Characters/Armored Skeleton/Armored Skeleton with shadows/Armored Skeleton-Attack02.png
+Characters/Armored Skeleton/Armored Skeleton with shadows/Armored Skeleton-Death.png
+Characters/Armored Skeleton/Armored Skeleton with shadows/Armored Skeleton-Hurt.png
+Characters/Armored Skeleton/Armored Skeleton with shadows/Armored Skeleton-Idle.png
+Characters/Armored Skeleton/Armored Skeleton with shadows/Armored Skeleton-Walk.png
+Characters/Armored Skeleton/Armored Skeleton with shadows/Armored Skeleton.png
+Characters/Armored Skeleton/Armored Skeleton(Split Effects)/Armored Skeleton-Attack01_Effect.png
+Characters/Armored Skeleton/Armored Skeleton(Split Effects)/Armored Skeleton-Attack02_Effect.png
+Characters/Armored Skeleton/Armored Skeleton(Split Effects)/Armored Skeleton.png
+Characters/Elite Orc/Elite Orc/Elite Orc-Attack01.png
+Characters/Elite Orc/Elite Orc/Elite Orc-Attack02.png
+Characters/Elite Orc/Elite Orc/Elite Orc-Attack03.png
+Characters/Elite Orc/Elite Orc/Elite Orc-Death.png
+Characters/Elite Orc/Elite Orc/Elite Orc-Hurt.png
+Characters/Elite Orc/Elite Orc/Elite Orc-Idle.png
+Characters/Elite Orc/Elite Orc/Elite Orc-Walk.png
+Characters/Elite Orc/Elite Orc/Elite Orc.png
+Characters/Elite Orc/Elite Orc/Shadow sprites/Elite Orc-Shadow.png
+Characters/Elite Orc/Elite Orc/Shadow sprites/Elite Orc-Shadow_attack03.png
+Characters/Elite Orc/Elite Orc/Shadow sprites/Elite Orc-Shadow_death.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc-Attack01.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc-Attack02.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc-Attack03.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc-Death.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc-Hurt.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc-Idle.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc-Walk.png
+Characters/Elite Orc/Elite Orc with shadows/Elite Orc.png
+Characters/Elite Orc/Elite Orc(Split Effects)/Elite Orc-Attack01_Effect.png
+Characters/Elite Orc/Elite Orc(Split Effects)/Elite Orc-Attack02_Effect.png
+Characters/Elite Orc/Elite Orc(Split Effects)/Elite Orc-Attack03_Effect.png
+Characters/Elite Orc/Elite Orc(Split Effects)/Elite Orc.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Attack01.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Attack02.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Attack03.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Death.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Hurt.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Idle.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton-Walk.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Greatsword Skeleton.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Shadow sprites/Greatsword Skeleton-shadow.png
+Characters/Greatsword Skeleton/Greatsword Skeleton/Shadow sprites/Greatsword Skeleton-shadow_death.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton-Attack01.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton-Attack02.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton-Attack03.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton-Death.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton-Hurt.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton-Idle.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton-Walk.png
+Characters/Greatsword Skeleton/Greatsword Skeleton with shadows/Greatsword Skeleton.png
+Characters/Greatsword Skeleton/Greatsword Skeleton(Split Effects)/Greatsword Skeleton-Attack01_Effect.png
+Characters/Greatsword Skeleton/Greatsword Skeleton(Split Effects)/Greatsword Skeleton-Attack02_Effect.png
+Characters/Greatsword Skeleton/Greatsword Skeleton(Split Effects)/Greatsword Skeleton-Attack03_Effect.png
+Characters/Greatsword Skeleton/Greatsword Skeleton(Split Effects)/Greatsword Skeleton.png
+Characters/Knight/Knight/Knight-Attack01.png
+Characters/Knight/Knight/Knight-Attack02.png
+Characters/Knight/Knight/Knight-Attack03.png
+Characters/Knight/Knight/Knight-Block.png
+Characters/Knight/Knight/Knight-Death.png
+Characters/Knight/Knight/Knight-Hurt.png
+Characters/Knight/Knight/Knight-Idle.png
+Characters/Knight/Knight/Knight-Walk.png
+Characters/Knight/Knight/Knight.png
+Characters/Knight/Knight/Shadow sprites/Knight-Shadow.png
+Characters/Knight/Knight/Shadow sprites/Knight-Shadow_death.png
+Characters/Knight/Knight with shadows/Knight-Attack01.png
+Characters/Knight/Knight with shadows/Knight-Attack02.png
+Characters/Knight/Knight with shadows/Knight-Attack03.png
+Characters/Knight/Knight with shadows/Knight-Block.png
+Characters/Knight/Knight with shadows/Knight-Death.png
+Characters/Knight/Knight with shadows/Knight-Hurt.png
+Characters/Knight/Knight with shadows/Knight-Idle.png
+Characters/Knight/Knight with shadows/Knight-Walk.png
+Characters/Knight/Knight with shadows/Knight.png
+Characters/Knight/Knight(Split Effects)/Knight-Attack01_Effect.png
+Characters/Knight/Knight(Split Effects)/Knight-Attack02_Effect.png
+Characters/Knight/Knight(Split Effects)/Knight-Attack03_Effect.png
+Characters/Knight/Knight(Split Effects)/Knight.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Attack01.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Attack02.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Attack03.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Block.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Death.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Hurt.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Idle.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Walk01.png
+Characters/Knight Templar/Knight Templar/Knight Templar-Walk02.png
+Characters/Knight Templar/Knight Templar/Knight Templar.png
+Characters/Knight Templar/Knight Templar/Shadow sprites/Knight Templar-Shadow.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Attack01.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Attack02.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Attack03.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Block.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Death.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Hurt.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Idle.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Walk01.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar-Walk02.png
+Characters/Knight Templar/Knight Templar with shadows/Knight Templar.png
+Characters/Knight Templar/Knight Templar(Split Effects)/Knight Templar-Attack01_Effect.png
+Characters/Knight Templar/Knight Templar(Split Effects)/Knight Templar-Attack02_Effect.png
+Characters/Knight Templar/Knight Templar(Split Effects)/Knight Templar-Attack03_Effect.png
+Characters/Knight Templar/Knight Templar(Split Effects)/Knight Templar.png
+Characters/Lancer/Lancer/Lancer-Attack01.png
+Characters/Lancer/Lancer/Lancer-Attack02.png
+Characters/Lancer/Lancer/Lancer-Attack03.png
+Characters/Lancer/Lancer/Lancer-Death.png
+Characters/Lancer/Lancer/Lancer-Hurt.png
+Characters/Lancer/Lancer/Lancer-Idle.png
+Characters/Lancer/Lancer/Lancer-Walk01.png
+Characters/Lancer/Lancer/Lancer-Walk02.png
+Characters/Lancer/Lancer/Lancer.png
+Characters/Lancer/Lancer/Shadow sprites/Lancer-Shadow.png
+Characters/Lancer/Lancer/Shadow sprites/Lancer-Shadow_death.png
+Characters/Lancer/Lancer with shadows/Lancer-Attack01.png
+Characters/Lancer/Lancer with shadows/Lancer-Attack02.png
+Characters/Lancer/Lancer with shadows/Lancer-Attack03.png
+Characters/Lancer/Lancer with shadows/Lancer-Death.png
+Characters/Lancer/Lancer with shadows/Lancer-Hurt.png
+Characters/Lancer/Lancer with shadows/Lancer-Idle.png
+Characters/Lancer/Lancer with shadows/Lancer-Walk01.png
+Characters/Lancer/Lancer with shadows/Lancer-Walk02.png
+Characters/Lancer/Lancer with shadows/Lancer.png
+Characters/Lancer/Lancer(Split Effects)/Lancer-Attack01_Effect.png
+Characters/Lancer/Lancer(Split Effects)/Lancer-Attack02_Effect.png
+Characters/Lancer/Lancer(Split Effects)/Lancer-Attack03_Effect.png
+Characters/Lancer/Lancer(Split Effects)/Lancer.png
+Characters/Orc/Orc/Orc-Attack01.png
+Characters/Orc/Orc/Orc-Attack02.png
+Characters/Orc/Orc/Orc-Death.png
+Characters/Orc/Orc/Orc-Hurt.png
+Characters/Orc/Orc/Orc-Idle.png
+Characters/Orc/Orc/Orc-Walk.png
+Characters/Orc/Orc/Orc.png
+Characters/Orc/Orc/Shadow sprites/Orc-shadow.png
+Characters/Orc/Orc/Shadow sprites/Orc-shadow_attack02.png
+Characters/Orc/Orc/Shadow sprites/Orc-shadow_death.png
+Characters/Orc/Orc with shadows/Orc-Attack01.png
+Characters/Orc/Orc with shadows/Orc-Attack02.png
+Characters/Orc/Orc with shadows/Orc-Death.png
+Characters/Orc/Orc with shadows/Orc-Hurt.png
+Characters/Orc/Orc with shadows/Orc-Idle.png
+Characters/Orc/Orc with shadows/Orc-Walk.png
+Characters/Orc/Orc with shadows/Orc.png
+Characters/Orc/Orc(Split Effects)/Orc-attack01_Effect.png
+Characters/Orc/Orc(Split Effects)/Orc-attack02_Effect.png
+Characters/Orc/Orc(Split Effects)/Orc.png
+Characters/Orc rider/Orc rider/Orc rider-Attack01.png
+Characters/Orc rider/Orc rider/Orc rider-Attack02.png
+Characters/Orc rider/Orc rider/Orc rider-Attack03.png
+Characters/Orc rider/Orc rider/Orc rider-Block.png
+Characters/Orc rider/Orc rider/Orc rider-Death.png
+Characters/Orc rider/Orc rider/Orc rider-Hurt.png
+Characters/Orc rider/Orc rider/Orc rider-Idle.png
+Characters/Orc rider/Orc rider/Orc rider-Walk.png
+Characters/Orc rider/Orc rider/Orc rider.png
+Characters/Orc rider/Orc rider/Shadow sprites/Orc rider-shadow.png
+Characters/Orc rider/Orc rider/Shadow sprites/Orc rider-shadow_death.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Attack01.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Attack02.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Attack03.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Block.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Death.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Hurt.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Idle.png
+Characters/Orc rider/Orc rider with shadows/Orc rider-Walk.png
+Characters/Orc rider/Orc rider with shadows/Orc rider.png
+Characters/Orc rider/Orc rider(Split Effects)/Orc rider-Attack01_Effect.png
+Characters/Orc rider/Orc rider(Split Effects)/Orc rider-Attack02_Effect.png
+Characters/Orc rider/Orc rider(Split Effects)/Orc rider-Attack03_Effect.png
+Characters/Orc rider/Orc rider(Split Effects)/Orc rider.png
+Characters/Priest/Magic(projectile)/Priest-Attack_Effect.png
+Characters/Priest/Magic(projectile)/Priest-Heal_Effect.png
+Characters/Priest/Priest/Priest-Attack.png
+Characters/Priest/Priest/Priest-Death.png
+Characters/Priest/Priest/Priest-Heal.png
+Characters/Priest/Priest/Priest-Hurt.png
+Characters/Priest/Priest/Priest-Idle.png
+Characters/Priest/Priest/Priest-Walk.png
+Characters/Priest/Priest/Priest.png
+Characters/Priest/Priest/Shadow sprites/Priest-Shadow.png
+Characters/Priest/Priest/Shadow sprites/Priest-Shadow_death.png
+Characters/Priest/Priest with shadows/Priest-Attack.png
+Characters/Priest/Priest with shadows/Priest-Death.png
+Characters/Priest/Priest with shadows/Priest-Heal.png
+Characters/Priest/Priest with shadows/Priest-Hurt.png
+Characters/Priest/Priest with shadows/Priest-Idle.png
+Characters/Priest/Priest with shadows/Priest-Walk.png
+Characters/Priest/Priest with shadows/Priest.png
+Characters/Priest/Priest(Split Effects)/Priest-Attack_Effect.png
+Characters/Priest/Priest(Split Effects)/Priest-Heal_Effect.png
+Characters/Priest/Priest(Split Effects)/Priest.png
+Characters/Skeleton/Skeleton/Shadow sprites/Skeleton-Shadow.png
+Characters/Skeleton/Skeleton/Shadow sprites/Skeleton-Shadow_death.png
+Characters/Skeleton/Skeleton/Skeleton-Attack01.png
+Characters/Skeleton/Skeleton/Skeleton-Attack02.png
+Characters/Skeleton/Skeleton/Skeleton-Block.png
+Characters/Skeleton/Skeleton/Skeleton-Death.png
+Characters/Skeleton/Skeleton/Skeleton-Hurt.png
+Characters/Skeleton/Skeleton/Skeleton-Idle.png
+Characters/Skeleton/Skeleton/Skeleton-Walk.png
+Characters/Skeleton/Skeleton/Skeleton.png
+Characters/Skeleton/Skeleton with shadows/Skeleton-Attack01.png
+Characters/Skeleton/Skeleton with shadows/Skeleton-Attack02.png
+Characters/Skeleton/Skeleton with shadows/Skeleton-Block.png
+Characters/Skeleton/Skeleton with shadows/Skeleton-Death.png
+Characters/Skeleton/Skeleton with shadows/Skeleton-Hurt.png
+Characters/Skeleton/Skeleton with shadows/Skeleton-Idle.png
+Characters/Skeleton/Skeleton with shadows/Skeleton-Walk.png
+Characters/Skeleton/Skeleton with shadows/Skeleton.png
+Characters/Skeleton/Skeleton(Split Effects)/Skeleton-Attack01_Effect.png
+Characters/Skeleton/Skeleton(Split Effects)/Skeleton-Attack02_Effect.png
+Characters/Skeleton/Skeleton(Split Effects)/Skeleton.png
+Characters/Skeleton Archer/Arrow(projectile)/Arrow03(100x100).png
+Characters/Skeleton Archer/Arrow(projectile)/Arrow03(32x32).png
+Characters/Skeleton Archer/Skeleton Archer/Shadow sprites/Skeleton Archer-shadow.png
+Characters/Skeleton Archer/Skeleton Archer/Shadow sprites/Skeleton Archer-shadow_death.png
+Characters/Skeleton Archer/Skeleton Archer/Skeleton Archer-Attack.png
+Characters/Skeleton Archer/Skeleton Archer/Skeleton Archer-Death.png
+Characters/Skeleton Archer/Skeleton Archer/Skeleton Archer-Hurt.png
+Characters/Skeleton Archer/Skeleton Archer/Skeleton Archer-Idle.png
+Characters/Skeleton Archer/Skeleton Archer/Skeleton Archer-Walk.png
+Characters/Skeleton Archer/Skeleton Archer/Skeleton Archer.png
+Characters/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer-Attack.png
+Characters/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer-Death.png
+Characters/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer-Hurt.png
+Characters/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer-Idle.png
+Characters/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer-Walk.png
+Characters/Skeleton Archer/Skeleton Archer with shadows/Skeleton Archer.png
+Characters/Skeleton Archer/Skeleton Archer(Split Effects)/Skeleton Archer-Attack_Effect.png
+Characters/Skeleton Archer/Skeleton Archer(Split Effects)/Skeleton Archer.png
+Characters/Slime/Slime/Shadow sprites/Slime-Shadow.png
+Characters/Slime/Slime/Shadow sprites/Slime-Shadow_walk.png
+Characters/Slime/Slime/Slime-Attack01.png
+Characters/Slime/Slime/Slime-Attack02.png
+Characters/Slime/Slime/Slime-Death.png
+Characters/Slime/Slime/Slime-Hurt.png
+Characters/Slime/Slime/Slime-Idle.png
+Characters/Slime/Slime/Slime-Walk.png
+Characters/Slime/Slime/Slime.png
+Characters/Slime/Slime with shadows/Slime-Attack01.png
+Characters/Slime/Slime with shadows/Slime-Attack02.png
+Characters/Slime/Slime with shadows/Slime-Death.png
+Characters/Slime/Slime with shadows/Slime-Hurt.png
+Characters/Slime/Slime with shadows/Slime-Idle.png
+Characters/Slime/Slime with shadows/Slime-Walk.png
+Characters/Slime/Slime with shadows/Slime.png
+Characters/Slime/Slime(Split Effects)/Slime-Attack01_Effect.png
+Characters/Slime/Slime(Split Effects)/Slime-Attack02_Effect.png
+Characters/Slime/Slime(Split Effects)/Slime.png
+Characters/Soldier/Arrow(projectile)/Arrow01(100x100).png
+Characters/Soldier/Arrow(projectile)/Arrow01(32x32).png
+Characters/Soldier/Soldier/Shadow sprites/Soldier-Shadow.png
+Characters/Soldier/Soldier/Shadow sprites/Soldier-Shadow_death.png
+Characters/Soldier/Soldier/Soldier-Attack01.png
+Characters/Soldier/Soldier/Soldier-Attack02.png
+Characters/Soldier/Soldier/Soldier-Attack03.png
+Characters/Soldier/Soldier/Soldier-Death.png
+Characters/Soldier/Soldier/Soldier-Hurt.png
+Characters/Soldier/Soldier/Soldier-Idle.png
+Characters/Soldier/Soldier/Soldier-Shadow_attack2.png
+Characters/Soldier/Soldier/Soldier-Walk.png
+Characters/Soldier/Soldier/Soldier.png
+Characters/Soldier/Soldier with shadows/Soldier-Attack01.png
+Characters/Soldier/Soldier with shadows/Soldier-Attack02.png
+Characters/Soldier/Soldier with shadows/Soldier-Attack03.png
+Characters/Soldier/Soldier with shadows/Soldier-Death.png
+Characters/Soldier/Soldier with shadows/Soldier-Hurt.png
+Characters/Soldier/Soldier with shadows/Soldier-Idle.png
+Characters/Soldier/Soldier with shadows/Soldier-Walk.png
+Characters/Soldier/Soldier with shadows/Soldier.png
+Characters/Soldier/Soldier(Split Effects)/Soldier-Attack01_Effect.png
+Characters/Soldier/Soldier(Split Effects)/Soldier-Attack02_Effect.png
+Characters/Soldier/Soldier(Split Effects)/Soldier-Attack03_Effect.png
+Characters/Soldier/Soldier(Split Effects)/Soldier.png
+Characters/Swordsman/Swordsman/Shadow sprites/Swordsman-Shadow.png
+Characters/Swordsman/Swordsman/Shadow sprites/Swordsman-Shadow_death.png
+Characters/Swordsman/Swordsman/Swordsman-Attack01.png
+Characters/Swordsman/Swordsman/Swordsman-Attack02.png
+Characters/Swordsman/Swordsman/Swordsman-Attack3.png
+Characters/Swordsman/Swordsman/Swordsman-Death.png
+Characters/Swordsman/Swordsman/Swordsman-Hurt.png
+Characters/Swordsman/Swordsman/Swordsman-Idle.png
+Characters/Swordsman/Swordsman/Swordsman-Walk.png
+Characters/Swordsman/Swordsman/Swordsman.png
+Characters/Swordsman/Swordsman with shadows/Swordsman-Attack01.png
+Characters/Swordsman/Swordsman with shadows/Swordsman-Attack02.png
+Characters/Swordsman/Swordsman with shadows/Swordsman-Attack3.png
+Characters/Swordsman/Swordsman with shadows/Swordsman-Death.png
+Characters/Swordsman/Swordsman with shadows/Swordsman-Hurt.png
+Characters/Swordsman/Swordsman with shadows/Swordsman-Idle.png
+Characters/Swordsman/Swordsman with shadows/Swordsman-Walk.png
+Characters/Swordsman/Swordsman with shadows/Swordsman.png
+Characters/Swordsman/Swordsman(Split Effects)/Swordsman-Attack01_Effect.png
+Characters/Swordsman/Swordsman(Split Effects)/Swordsman-Attack02_Effect.png
+Characters/Swordsman/Swordsman(Split Effects)/Swordsman-Attack3_Effect.png
+Characters/Swordsman/Swordsman(Split Effects)/Swordsman.png
+Characters/Werebear/Werebear/shadow sprites/Werebear-shadow.png
+Characters/Werebear/Werebear/shadow sprites/Werebear-shadow_death.png
+Characters/Werebear/Werebear/Werebear-Attack01.png
+Characters/Werebear/Werebear/Werebear-Attack02.png
+Characters/Werebear/Werebear/Werebear-Attack03.png
+Characters/Werebear/Werebear/Werebear-Death.png
+Characters/Werebear/Werebear/Werebear-Hurt.png
+Characters/Werebear/Werebear/Werebear-Idle.png
+Characters/Werebear/Werebear/Werebear-Walk.png
+Characters/Werebear/Werebear/Werebear.png
+Characters/Werebear/Werebear with shadows/Werebear-Attack01.png
+Characters/Werebear/Werebear with shadows/Werebear-Attack02.png
+Characters/Werebear/Werebear with shadows/Werebear-Attack03.png
+Characters/Werebear/Werebear with shadows/Werebear-Death.png
+Characters/Werebear/Werebear with shadows/Werebear-Hurt.png
+Characters/Werebear/Werebear with shadows/Werebear-Idle.png
+Characters/Werebear/Werebear with shadows/Werebear-Walk.png
+Characters/Werebear/Werebear with shadows/Werebear.png
+Characters/Werebear/Werebear(Split Effects)/Werebear-Attack01_Effect.png
+Characters/Werebear/Werebear(Split Effects)/Werebear-Attack02_Effect.png
+Characters/Werebear/Werebear(Split Effects)/Werebear-Attack03_Effect.png
+Characters/Werebear/Werebear(Split Effects)/Werebear.png
+Characters/Werewolf/Werewolf/shadow sprites/Werewolf-shadow.png
+Characters/Werewolf/Werewolf/shadow sprites/Werewolf-shadow_death.png
+Characters/Werewolf/Werewolf/Werewolf-Attack01.png
+Characters/Werewolf/Werewolf/Werewolf-Attack02.png
+Characters/Werewolf/Werewolf/Werewolf-Death.png
+Characters/Werewolf/Werewolf/Werewolf-Hurt.png
+Characters/Werewolf/Werewolf/Werewolf-Idle.png
+Characters/Werewolf/Werewolf/Werewolf-Walk.png
+Characters/Werewolf/Werewolf/Werewolf.png
+Characters/Werewolf/Werewolf with shadows/Werewolf-Attack01.png
+Characters/Werewolf/Werewolf with shadows/Werewolf-Attack02.png
+Characters/Werewolf/Werewolf with shadows/Werewolf-Death.png
+Characters/Werewolf/Werewolf with shadows/Werewolf-Hurt.png
+Characters/Werewolf/Werewolf with shadows/Werewolf-Idle.png
+Characters/Werewolf/Werewolf with shadows/Werewolf-Walk.png
+Characters/Werewolf/Werewolf with shadows/Werewolf.png
+Characters/Werewolf/Werewolf(Split Effects)/Werewolf-Attack01_Effect.png
+Characters/Werewolf/Werewolf(Split Effects)/Werewolf-Attack02_Effect.png
+Characters/Werewolf/Werewolf(Split Effects)/Werewolf.png
+Characters/Wizard/Magic(projectile)/Wizard-Attack01_Effect.png
+Characters/Wizard/Magic(projectile)/Wizard-Attack02_Effect.png
+Characters/Wizard/Wizard/Shadow sprites/Wizard-Shadow.png
+Characters/Wizard/Wizard/Shadow sprites/Wizard-Shadow_death.png
+Characters/Wizard/Wizard/Wizard-Attack01.png
+Characters/Wizard/Wizard/Wizard-Attack02.png
+Characters/Wizard/Wizard/Wizard-DEATH.png
+Characters/Wizard/Wizard/Wizard-Hurt.png
+Characters/Wizard/Wizard/Wizard-Idle.png
+Characters/Wizard/Wizard/Wizard-Walk.png
+Characters/Wizard/Wizard/Wizard.png
+Characters/Wizard/Wizard with shadows/Wizard-Attack01.png
+Characters/Wizard/Wizard with shadows/Wizard-Attack02.png
+Characters/Wizard/Wizard with shadows/Wizard-DEATH.png
+Characters/Wizard/Wizard with shadows/Wizard-Hurt.png
+Characters/Wizard/Wizard with shadows/Wizard-Idle.png
+Characters/Wizard/Wizard with shadows/Wizard-Walk.png
+Characters/Wizard/Wizard with shadows/Wizard.png
+Characters/Wizard/Wizard(Split Effects)/Wizard-Attack01_Effect.png
+Characters/Wizard/Wizard(Split Effects)/Wizard-Attack02_Effect.png
+Characters/Wizard/Wizard(Split Effects)/Wizard.png
+Controller-Icons/icons_ps4_animated_analog_click.png
+Controller-Icons/icons_ps4_animated_analog_move.png
+Controller-Icons/icons_ps4_animated_buttons1.png
+Controller-Icons/icons_ps4_animated_buttons2.png
+Controller-Icons/icons_ps4_animated_dpad1.png
+Controller-Icons/icons_ps4_animated_dpad2.png
+Controller-Icons/icons_ps4_without_outline_colored.png
+Controller-Icons/icons_ps4_with_outline_fill.png
+Controller-Icons/icons_ps4_with_outline_no_fill.png
+Controller-Icons/icons_xbox_animated_analog_click.png
+Controller-Icons/icons_xbox_animated_analog_move.png
+Controller-Icons/icons_xbox_animated_buttons1.png
+Controller-Icons/icons_xbox_animated_buttons2.png
+Controller-Icons/icons_xbox_animated_dpad1.png
+Controller-Icons/icons_xbox_animated_dpad2.png
+Controller-Icons/icons_xbox_without_outline_colored.png
+Controller-Icons/icons_xbox_with_outline_fill.png
+Controller-Icons/icons_xbox_with_outline_no_fill.png
+dungeon_tiles.png
+Dungeon_Tileset.png
+Food.png
+Icons/Backpack.png
+Icons/Basket.png
+Icons/Battery.png
+Icons/Book.png
+Icons/Bottle.png
+Icons/Briefcase.png
+Icons/Car.png
+Icons/Cash.png
+Icons/Cash2.png
+Icons/CatchingNet.png
+Icons/CatHead.png
+Icons/CD.png
+Icons/ChestTreasure.png
+Icons/Chili.png
+Icons/Cloud.png
+Icons/Coin.png
+Icons/Coin2.png
+Icons/CookingPot.png
+Icons/Cutlery.png
+Icons/Document.png
+Icons/Download.png
+Icons/Enter.png
+Icons/Enter2.png
+Icons/Exit.png
+Icons/Eye.png
+Icons/FloppyDisk.png
+Icons/Flower.png
+Icons/Flower2.png
+Icons/FlowerPot.png
+Icons/Gamepad.png
+Icons/Gamepad2.png
+Icons/Gamepad3.png
+Icons/Gear.png
+Icons/Hammer.png
+Icons/Home.png
+Icons/Info.png
+Icons/Key.png
+Icons/Keyboard.png
+Icons/Letter.png
+Icons/Lightbulb.png
+Icons/Locked.png
+Icons/Luggage.png
+Icons/MagnifyingGlass.png
+Icons/Medicine.png
+Icons/Microphone.png
+Icons/Monitor.png
+Icons/MouseComputer.png
+Icons/MusicNotes.png
+Icons/Necklace.png
+Icons/Option.png
+Icons/PaintBrush.png
+Icons/Pencil.png
+Icons/PetBowl.png
+Icons/PetBrush.png
+Icons/Piano.png
+Icons/Play.png
+Icons/PlayPause.png
+Icons/Plug.png
+Icons/PotionRed.png
+Icons/Power.png
+Icons/Restart.png
+Icons/Scissors.png
+Icons/ShoppingCart.png
+Icons/Skull.png
+Icons/Sleep.png
+Icons/Spatula.png
+Icons/SpeakerMute.png
+Icons/SpeakerOn.png
+Icons/Sun.png
+Icons/Team.png
+Icons/Telephone.png
+Icons/Touch.png
+Icons/Trashbin.png
+Icons/Trophy.png
+Icons/Unlocked.png
+Icons/Upload.png
+Icons/Wheat.png
+Icons/Wrench.png
+Icons/Wrench2.png
+Icons/Wrench3.png
+Magic-Projectile/Priest-Attack_effect.png
+Magic-Projectile/Priest-Heal_Effect.png
+Magic-Projectile/Wizard-Attack01_Effect.png
+Magic-Projectile/Wizard-Attack02_Effect.png
+Traps/arrow/arrow_1.png
+Traps/arrow/arrow_2.png
+Traps/arrow/arrow_3.png
+Traps/arrow/arrow_4.png
+Traps/arrow/Just_arrow.png
+Traps/box_1/box_1_1.png
+Traps/box_1/box_1_2.png
+Traps/box_1/box_1_3.png
+Traps/box_1/box_1_4.png
+Traps/box_2/box_2_1.png
+Traps/box_2/box_2_2.png
+Traps/box_2/box_2_3.png
+Traps/box_2/box_2_4.png
+Traps/chest/chest_1.png
+Traps/chest/chest_2.png
+Traps/chest/chest_3.png
+Traps/chest/chest_4.png
+Traps/chest/chest_open_1.png
+Traps/chest/chest_open_2.png
+Traps/chest/chest_open_3.png
+Traps/chest/chest_open_4.png
+Traps/coin/coin_1.png
+Traps/coin/coin_2.png
+Traps/coin/coin_3.png
+Traps/coin/coin_4.png
+Traps/flag/flag_1.png
+Traps/flag/flag_2.png
+Traps/flag/flag_3.png
+Traps/flag/flag_4.png
+Traps/flamethrower/flamethrower_1_1.png
+Traps/flamethrower/flamethrower_1_2.png
+Traps/flamethrower/flamethrower_1_3.png
+Traps/flamethrower/flamethrower_1_4.png
+Traps/flamethrower/flamethrower_2_1.png
+Traps/flamethrower/flamethrower_2_2.png
+Traps/flamethrower/flamethrower_2_3.png
+Traps/flamethrower/flamethrower_2_4.png
+Traps/flasks/flasks_1_1.png
+Traps/flasks/flasks_1_2.png
+Traps/flasks/flasks_1_3.png
+Traps/flasks/flasks_1_4.png
+Traps/flasks/flasks_2_1.png
+Traps/flasks/flasks_2_2.png
+Traps/flasks/flasks_2_3.png
+Traps/flasks/flasks_2_4.png
+Traps/flasks/flasks_3_1.png
+Traps/flasks/flasks_3_2.png
+Traps/flasks/flasks_3_3.png
+Traps/flasks/flasks_3_4.png
+Traps/flasks/flasks_4_1.png
+Traps/flasks/flasks_4_2.png
+Traps/flasks/flasks_4_3.png
+Traps/flasks/flasks_4_4.png
+Traps/keys/keys_1_1.png
+Traps/keys/keys_1_2.png
+Traps/keys/keys_1_3.png
+Traps/keys/keys_1_4.png
+Traps/keys/keys_2_1.png
+Traps/keys/keys_2_2.png
+Traps/keys/keys_2_3.png
+Traps/keys/keys_2_4.png
+Traps/mini_box_1/mini_box_1_1.png
+Traps/mini_box_1/mini_box_1_2.png
+Traps/mini_box_1/mini_box_1_3.png
+Traps/mini_box_1/mini_box_1_4.png
+Traps/mini_box_2/mini_box_2_1.png
+Traps/mini_box_2/mini_box_2_2.png
+Traps/mini_box_2/mini_box_2_3.png
+Traps/mini_box_2/mini_box_2_4.png
+Traps/mini_chest/mini_chest_1.png
+Traps/mini_chest/mini_chest_2.png
+Traps/mini_chest/mini_chest_3.png
+Traps/mini_chest/mini_chest_4.png
+Traps/mini_chest/mini_chest_open_1.png
+Traps/mini_chest/mini_chest_open_2.png
+Traps/mini_chest/mini_chest_open_3.png
+Traps/mini_chest/mini_chest_open_4.png
+Traps/peaks/peaks_1.png
+Traps/peaks/peaks_2.png
+Traps/peaks/peaks_3.png
+Traps/peaks/peaks_4.png
+Traps/torch/candlestick_1_1.png
+Traps/torch/candlestick_1_2.png
+Traps/torch/candlestick_1_3.png
+Traps/torch/candlestick_1_4.png
+Traps/torch/candlestick_2_1.png
+Traps/torch/candlestick_2_2.png
+Traps/torch/candlestick_2_3.png
+Traps/torch/candlestick_2_4.png
+Traps/torch/side_torch_1.png
+Traps/torch/side_torch_2.png
+Traps/torch/side_torch_3.png
+Traps/torch/side_torch_4.png
+Traps/torch/torch_1.png
+Traps/torch/torch_2.png
+Traps/torch/torch_3.png
+Traps/torch/torch_4.png

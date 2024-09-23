@@ -1,0 +1,133 @@
+[gd_scene load_steps=15 format=3 uid="uid://c48boue3byrbp"]
+
+[ext_resource type="Texture2D" uid="uid://mrdmaq6svknu" path="res://assets/xbox-button.png" id="1_0vlrx"]
+[ext_resource type="Texture2D" uid="uid://blx0iop8a47gn" path="res://assets/keyboard-button.png" id="2_vxs5t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5dr1n"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ddmue"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h26r0"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhg17"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rncsa"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndogs"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(32, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j15is"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5t1md"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(32, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nuc57"]
+atlas = ExtResource("2_vxs5t")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhem2"]
+atlas = ExtResource("2_vxs5t")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10gn3"]
+atlas = ExtResource("1_0vlrx")
+region = Rect2(0, 64, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_imqal"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5dr1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ddmue")
+}],
+"loop": true,
+"name": &"CONTROLLER_A",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h26r0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhg17")
+}],
+"loop": true,
+"name": &"CONTROLLER_B",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rncsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndogs")
+}],
+"loop": true,
+"name": &"CONTROLLER_X",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j15is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5t1md")
+}],
+"loop": true,
+"name": &"CONTROLLER_Y",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nuc57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xhem2")
+}],
+"loop": true,
+"name": &"KEYBOARD_E",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10gn3")
+}],
+"loop": true,
+"name": &"NONE",
+"speed": 5.0
+}]
+
+[node name="ToolTip" type="Control"]
+light_mask = 4
+visibility_layer = 4
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(9.53674e-07, -1.90735e-06)
+scale = Vector2(0.6875, 0.6875)
+sprite_frames = SubResource("SpriteFrames_imqal")
+animation = &"KEYBOARD_E"
+autoplay = "CONTROLLER_A"

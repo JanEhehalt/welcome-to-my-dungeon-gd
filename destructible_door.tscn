@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://pd705fts2lv"]
+
+[ext_resource type="Texture2D" uid="uid://ccc5qs3s67ncx" path="res://assets/destructible-door.png" id="1_8yi67"]
+[ext_resource type="Script" path="res://destructible_door.gd" id="1_13r8t"]
+[ext_resource type="PackedScene" uid="uid://c48boue3byrbp" path="res://tool_tip.tscn" id="3_hddpj"]
+[ext_resource type="Texture2D" uid="uid://5nyel0smm4g8" path="res://assets/wall.png" id="4_2aje1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7pfd"]
+atlas = ExtResource("1_8yi67")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wct50"]
+atlas = ExtResource("1_8yi67")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5qi3"]
+atlas = ExtResource("1_8yi67")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7hwa"]
+atlas = ExtResource("1_8yi67")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rvlci"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7pfd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wct50")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5qi3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7hwa")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdclw"]
+size = Vector2(16, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_enlm1"]
+
+[node name="DestructibleDoor" type="StaticBody2D"]
+texture_filter = 1
+script = ExtResource("1_13r8t")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_rvlci")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_vdclw")
+
+[node name="InteractionArea" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
+shape = SubResource("CapsuleShape2D_enlm1")
+
+[node name="ToolTip" parent="." instance=ExtResource("3_hddpj")]
+offset_left = 14.0
+offset_top = -12.0
+offset_right = 14.0
+offset_bottom = -12.0
+
+[node name="Extra_Wall_right" type="Sprite2D" parent="."]
+position = Vector2(16, 0)
+texture = ExtResource("4_2aje1")
+
+[node name="Extra_Wall_left" type="Sprite2D" parent="."]
+position = Vector2(-16, 0)
+texture = ExtResource("4_2aje1")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+volume_db = -10.0
