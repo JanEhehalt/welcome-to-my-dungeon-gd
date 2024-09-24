@@ -103,6 +103,7 @@ autoplay = "5"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttractionArea"]
 shape = SubResource("CircleShape2D_800j1")
+debug_color = Color(0, 0.639216, 0.380392, 0)
 
 [node name="PìckupArea" type="Area2D" parent="."]
 

@@ -3,17 +3,21 @@ extends CharacterBody2D
 var hit_soft_sound = preload("res://assets/sounds/hit_slime_soft.ogg")
 var hit_hard_sound = preload("res://assets/sounds/hit_slime_metal.ogg")
 
-@export var BASE_MOVEMENT_SPEED = 25.0
+@export var BASE_MOVEMENT_SPEED = 20.0
 
 var speed = BASE_MOVEMENT_SPEED
 
 var player = null
 
-var ATTACK_COOLDOWN_BASE = 2
+@export var ATTACK_COOLDOWN_BASE = 2
 var attack_cooldown = 0
 
 var FLIP_COOLDOWN_BASE = 0.3
 var flip_cooldown = 0
+
+@export var HEAVY_ATTACK_BASE_CHANCE = 0.1
+@export var HEAVY_ATTACK_CHANCE_INCREASE_PER_HIT = 0.3
+var heavy_attack_chance = HEAVY_ATTACK_BASE_CHANCE
 
 func _ready() -> void:
 	for entity in get_parent().get_children():
@@ -25,10 +29,13 @@ func _process(delta: float) -> void:
 	flip_cooldown = max(0, flip_cooldown - delta)
 	attack_cooldown = max(0, attack_cooldown - delta)
 	
+	if player not in $AttentionRange.get_overlapping_bodies():
+		return
+	
 	var speed_tmp = speed
 	if $AnimatedSprite2D.animation == "walk":
 		if $AnimatedSprite2D.frame in [1, 2]:
-			speed_tmp *= 0.5
+			speed_tmp *= 1.5
 	
 	var movement: Vector2 = player.get_node("CollisionShape2D").global_position - $PlayerTargetArea/CollisionShape2D.global_position
 	
@@ -39,8 +46,9 @@ func _process(delta: float) -> void:
 		$AnimatedSprite2D.play_anim("walk")
 	elif attack_cooldown == 0:
 		attack_cooldown = ATTACK_COOLDOWN_BASE
-		if randf_range(0, 1) < 0.2:
+		if randf_range(0, 1) < heavy_attack_chance:
 			$AnimatedSprite2D.play_anim("heavy_hit")
+			heavy_attack_chance = HEAVY_ATTACK_BASE_CHANCE
 		else:
 			$AnimatedSprite2D.play_anim("hit")
 	
@@ -49,6 +57,7 @@ func _process(delta: float) -> void:
 		manage_flip(true)
 	if(flip_vec.x > 0):
 		manage_flip(false)
+	
 
 func set_speed_multiplier(multiplier):
 	speed = BASE_MOVEMENT_SPEED * multiplier
@@ -79,6 +88,7 @@ func manage_flip(flip: bool):
 		$PlayerTargetArea/CollisionShape2D.position.x *= -1
 
 func handle_player_hit(from_left: bool):
+	heavy_attack_chance += HEAVY_ATTACK_CHANCE_INCREASE_PER_HIT
 	$AudioStreamPlayer2D.stop()
 	if $AnimatedSprite2D.animation == "heavy_hit":
 		$AudioStreamPlayer2D.stream = hit_hard_sound
