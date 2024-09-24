@@ -178,4 +178,4 @@ disabled = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(0, -7)
-volume_db = -15.0
+volume_db = -25.0

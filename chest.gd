@@ -17,7 +17,7 @@ func _ready() -> void:
 	tool_tip_right_x = $ToolTip.position.x
 	tool_tip_left_x = tool_tip_right_x * -1
 
-func handle_player_hit(from_left: bool):
+func handle_player_hit(from_left: bool, dmg: int):
 	$AudioStreamPlayer2D.stop()
 	match $AnimatedSprite2D.frame:
 		0: $AudioStreamPlayer2D.stream = hit_chest_sound_1

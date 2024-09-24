@@ -143,7 +143,19 @@ position = Vector2(184, -167)
 position = Vector2(344, -248)
 
 [node name="Slime" parent="Entities" instance=ExtResource("8_i7i3q")]
-position = Vector2(268, -193)
+position = Vector2(393, -340)
+
+[node name="Slime2" parent="Entities" instance=ExtResource("8_i7i3q")]
+position = Vector2(268, -340)
+
+[node name="Slime3" parent="Entities" instance=ExtResource("8_i7i3q")]
+position = Vector2(337, -342)
+
+[node name="Slime4" parent="Entities" instance=ExtResource("8_i7i3q")]
+position = Vector2(395, -167)
+
+[node name="Slime5" parent="Entities" instance=ExtResource("8_i7i3q")]
+position = Vector2(386, -125)
 
 [node name="TiledMapLayersAboveEntities" type="Node2D" parent="."]
 

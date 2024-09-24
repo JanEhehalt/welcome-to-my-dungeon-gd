@@ -49,7 +49,7 @@ func _process(delta: float) -> void:
 
 var hit_counter = 0
 
-func handle_player_hit(from_left: bool):
+func handle_player_hit(from_left: bool, dmg: int):
 	$AudioStreamPlayer2D.stop()
 	$AudioStreamPlayer2D.stream = hit_metal_sound
 	$AudioStreamPlayer2D.play()

@@ -5,7 +5,7 @@ var animation_informations = {
 	"hit": AnimationInformation.new("hit", true, false, "idle", 0.5),
 	"idle": AnimationInformation.new("idle", false, true, "idle", 1),
 	"walk": AnimationInformation.new("walk", false, true, "idle", 1),
-	"die": AnimationInformation.new("die", true, false, "idle", 0),
+	"die": AnimationInformation.new("die", true, false, "die", 0),
 	"hurt": AnimationInformation.new("hurt", true, false, "idle", 0.8),
 	"heavy_hit": AnimationInformation.new("heavy_hit", true, false, "idle", 0.2)
 }
@@ -25,9 +25,13 @@ func _on_frame_change():
 
 func _on_animation_finished():
 	if animation_informations[animation].play_once:
+		if animation == "die":
+			return
 		force_play(animation_informations[animation].fallback)
 
 func play_anim(to_anim: String) -> void:
+	if animation == "die":
+		return
 	if to_anim == "hurt" and animation != "heavy_hit":
 		play(to_anim)
 		get_parent().set_speed_multiplier(animation_informations[animation].speed_prc)

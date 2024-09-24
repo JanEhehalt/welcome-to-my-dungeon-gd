@@ -6,7 +6,8 @@ var swing_sound_1 = preload("res://assets/sounds/swing.wav")
 var swing_sound_2 = preload("res://assets/sounds/swing2.wav")
 var swing_sound_3 = preload("res://assets/sounds/swing3.wav")
 
-
+@export var BASE_DMG = 2
+var dmg = BASE_DMG
 
 var speed: float = 0
 
@@ -61,9 +62,9 @@ func hit_other_entities():
 	for object in $SwordArea.get_overlapping_bodies():
 		if object.has_method("handle_player_hit"):
 			if position.x <= object.position.x:
-				object.handle_player_hit(true)
+				object.handle_player_hit(true, dmg)
 			else:
-				object.handle_player_hit(false)
+				object.handle_player_hit(false, dmg)
 
 @export var coin_counter: int = 0
 

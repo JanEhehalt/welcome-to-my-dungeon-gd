@@ -15,6 +15,9 @@ var attack_cooldown = 0
 var FLIP_COOLDOWN_BASE = 0.3
 var flip_cooldown = 0
 
+@export var HP_BASE = 10
+var hp = HP_BASE 
+
 @export var HEAVY_ATTACK_BASE_CHANCE = 0.1
 @export var HEAVY_ATTACK_CHANCE_INCREASE_PER_HIT = 0.3
 var heavy_attack_chance = HEAVY_ATTACK_BASE_CHANCE
@@ -25,9 +28,25 @@ func _ready() -> void:
 			player = entity
 			return
 
+var looted = false
+
+		
 func _process(delta: float) -> void:
 	flip_cooldown = max(0, flip_cooldown - delta)
 	attack_cooldown = max(0, attack_cooldown - delta)
+	
+	if $AnimatedSprite2D.animation == "die":
+		$CollisionShape2D.disabled = true
+		if $AnimatedSprite2D.frame == 3:
+			if not looted:
+				looted = true
+				var amount = randi_range(1,5)
+				if amount == 5:
+					spawn_coin(Vector2(), 5)
+				else:
+					for x in amount:
+						spawn_coin(Vector2(randi_range(-5,5), randi_range(-2,2)))
+
 	
 	if player not in $AttentionRange.get_overlapping_bodies():
 		return
@@ -77,7 +96,7 @@ func hit_other_entities():
 	
 
 func manage_flip(flip: bool):
-	if $AnimatedSprite2D.animation == "hit":
+	if $AnimatedSprite2D.animation in ["die", "hit"]:
 		return 
 	if flip != $AnimatedSprite2D.flip_h and flip_cooldown == 0:
 		flip_cooldown = FLIP_COOLDOWN_BASE
@@ -87,12 +106,23 @@ func manage_flip(flip: bool):
 		$HeavyAttackArea/CollisionShape2D.position.x *= -1
 		$PlayerTargetArea/CollisionShape2D.position.x *= -1
 
-func handle_player_hit(from_left: bool):
+func handle_player_hit(from_left: bool, dmg: int):
 	heavy_attack_chance += HEAVY_ATTACK_CHANCE_INCREASE_PER_HIT
 	$AudioStreamPlayer2D.stop()
 	if $AnimatedSprite2D.animation == "heavy_hit":
 		$AudioStreamPlayer2D.stream = hit_hard_sound
 	else:
 		$AudioStreamPlayer2D.stream = hit_soft_sound
+		hp -= dmg
+		if hp <= 0:
+			$AnimatedSprite2D.force_play("die")
 	$AudioStreamPlayer2D.play()
 	$AnimatedSprite2D.play_anim("hurt")
+
+func spawn_coin(offset: Vector2 = Vector2(0, 0), value: int = 1):
+	var coin = load("res://coin.tscn") as PackedScene
+	var new_coin = coin.instantiate() as CharacterBody2D
+	new_coin.value = value
+	new_coin.position = position + offset
+	new_coin.shadow_visible = false
+	get_parent().add_child(new_coin)

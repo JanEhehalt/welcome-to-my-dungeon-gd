@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 				$AudioStreamPlayer2D.stream = open_sound
 				$AudioStreamPlayer2D.play()
 
-func handle_player_hit(from_left: bool):
+func handle_player_hit(from_left: bool, dmg: int):
 	if destruction_state == 3 or open:
 		return
 	destruction_state += 1

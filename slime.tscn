@@ -339,10 +339,8 @@ shape = SubResource("CapsuleShape2D_pomrd")
 texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_qmyo6")
-animation = &"heavy_hit"
+animation = &"die"
 autoplay = "idle"
-frame = 8
-frame_progress = 0.730365
 script = ExtResource("5_knd80")
 
 [node name="AttackArea" type="Area2D" parent="."]
