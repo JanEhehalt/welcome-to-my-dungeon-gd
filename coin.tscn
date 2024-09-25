@@ -96,7 +96,7 @@ texture = ExtResource("2_lld67")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_0besu")
-animation = &"1"
+animation = &"5"
 autoplay = "5"
 
 [node name="AttractionArea" type="Area2D" parent="."]

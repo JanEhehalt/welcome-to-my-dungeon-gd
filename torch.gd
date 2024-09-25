@@ -26,10 +26,9 @@ func _on_animation_finished():
 		$PointLight2D.enabled = false
 
 var flicker_speed = 1.5
-
-var base_intensity = 1.0
+var base_intensity = 1.2
 var flicker_intensity = 0.8
-var base_size = 1.0 
+var base_size = 1.5 
 var flicker_size = 0.8
 
 func _process(delta: float) -> void:

@@ -181,7 +181,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_7gjoe")
 }],
 "loop": false,
-"name": &"die",
+"name": &"slime_die",
 "speed": 8.0
 }, {
 "frames": [{
@@ -222,7 +222,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_xdpt6")
 }],
 "loop": false,
-"name": &"heavy_hit",
+"name": &"slime_heavy_hit",
 "speed": 8.0
 }, {
 "frames": [{
@@ -245,7 +245,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_nkny4")
 }],
 "loop": false,
-"name": &"hit",
+"name": &"slime_hit",
 "speed": 12.0
 }, {
 "frames": [{
@@ -262,7 +262,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_glsfj")
 }],
 "loop": false,
-"name": &"hurt",
+"name": &"slime_hurt",
 "speed": 16.0
 }, {
 "frames": [{
@@ -285,7 +285,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_rghxv")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"slime_idle",
 "speed": 8.0
 }, {
 "frames": [{
@@ -308,12 +308,15 @@ animations = [{
 "texture": SubResource("AtlasTexture_75m4v")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"slime_walk",
 "speed": 8.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_u2m44"]
+radius = 112.018
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i2qpu"]
-radius = 4.0
+radius = 6.0
 height = 32.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_caroh"]
@@ -323,9 +326,6 @@ height = 14.0
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_md4jr"]
 radius = 14.0
 height = 42.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_u2m44"]
-radius = 112.018
 
 [node name="Slime" type="CharacterBody2D"]
 script = ExtResource("1_icm18")
@@ -339,9 +339,15 @@ shape = SubResource("CapsuleShape2D_pomrd")
 texture_filter = 1
 position = Vector2(0, -1)
 sprite_frames = SubResource("SpriteFrames_qmyo6")
-animation = &"die"
-autoplay = "idle"
+animation = &"slime_walk"
+autoplay = "slime_idle"
 script = ExtResource("5_knd80")
+
+[node name="AttentionRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttentionRange"]
+shape = SubResource("CircleShape2D_u2m44")
+debug_color = Color(0.778927, 0, 0.085826, 0)
 
 [node name="AttackArea" type="Area2D" parent="."]
 
@@ -349,6 +355,7 @@ script = ExtResource("5_knd80")
 position = Vector2(18, -1)
 rotation = -1.5708
 shape = SubResource("CapsuleShape2D_i2qpu")
+debug_color = Color(0.913725, 0.294118, 0, 0.168627)
 
 [node name="PlayerTargetArea" type="Area2D" parent="."]
 
@@ -356,6 +363,7 @@ shape = SubResource("CapsuleShape2D_i2qpu")
 position = Vector2(14, 0)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_caroh")
+debug_color = Color(0.823246, 0.397943, 0, 1)
 
 [node name="HeavyAttackArea" type="Area2D" parent="."]
 
@@ -363,12 +371,7 @@ shape = SubResource("CapsuleShape2D_caroh")
 position = Vector2(29, 5)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_md4jr")
+debug_color = Color(0.945776, 0.232883, 1.92523e-07, 0)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 volume_db = -10.0
-
-[node name="AttentionRange" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttentionRange"]
-shape = SubResource("CircleShape2D_u2m44")
-debug_color = Color(0.778927, 0, 0.085826, 0)

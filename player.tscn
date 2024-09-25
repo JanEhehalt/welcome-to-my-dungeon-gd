@@ -140,7 +140,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ocgae")
 }],
 "loop": false,
-"name": &"die",
+"name": &"player_die",
 "speed": 8.0
 }, {
 "frames": [{
@@ -166,7 +166,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_idng0")
 }],
 "loop": false,
-"name": &"hit",
+"name": &"player_hit",
 "speed": 12.0
 }, {
 "frames": [{
@@ -183,7 +183,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_pl61l")
 }],
 "loop": false,
-"name": &"hurt",
+"name": &"player_hurt",
 "speed": 16.0
 }, {
 "frames": [{
@@ -206,7 +206,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_fb83b")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"player_idle",
 "speed": 8.0
 }, {
 "frames": [{
@@ -235,7 +235,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ml3hq")
 }],
 "loop": true,
-"name": &"walk",
+"name": &"player_walk",
 "speed": 8.0
 }]
 
@@ -255,29 +255,31 @@ texture_filter = 1
 texture_repeat = 1
 position = Vector2(0, -7)
 script = ExtResource("1_rp82f")
+coin_counter = 100
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5.42, 5.42)
+zoom = Vector2(3.75, 3.75)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_u40i6")
-animation = &"hit"
-autoplay = "idle"
-frame = 3
-frame_progress = 0.347227
+animation = &"player_walk"
+autoplay = "player_idle"
 script = ExtResource("3_q7jsl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 6)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_g3wdl")
+debug_color = Color(0, 0.647059, 0.258824, 0.239216)
 
 [node name="SwordArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwordArea"]
-position = Vector2(15, -1)
+position = Vector2(12, -1)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_15o4j")
+debug_color = Color(0.819608, 0.403922, 0, 0.168627)
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource("OccluderPolygon2D_in3te")

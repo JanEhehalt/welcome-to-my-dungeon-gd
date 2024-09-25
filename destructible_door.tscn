@@ -41,10 +41,10 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdclw"]
-size = Vector2(16, 1)
-
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_enlm1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdclw"]
+size = Vector2(16, 5.5)
 
 [node name="DestructibleDoor" type="StaticBody2D"]
 texture_filter = 1
@@ -54,15 +54,16 @@ script = ExtResource("1_13r8t")
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_rvlci")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6)
-shape = SubResource("RectangleShape2D_vdclw")
-
 [node name="InteractionArea" type="Area2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea"]
 shape = SubResource("CapsuleShape2D_enlm1")
+debug_color = Color(0, 0.6, 0.701961, 0.101961)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3.75)
+shape = SubResource("RectangleShape2D_vdclw")
+debug_color = Color(0, 0.65098, 0.0666667, 0.2)
 
 [node name="ToolTip" parent="." instance=ExtResource("3_hddpj")]
 offset_left = 14.0

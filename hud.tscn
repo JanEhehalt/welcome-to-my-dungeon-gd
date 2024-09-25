@@ -1,32 +1,63 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnrig6ps7xcd4"]
+[gd_scene load_steps=5 format=3 uid="uid://dnrig6ps7xcd4"]
 
 [ext_resource type="Texture2D" uid="uid://cd10gyk318chn" path="res://assets/single_coin.png" id="1_om6rg"]
 [ext_resource type="FontFile" uid="uid://mqcyu0ndi4y3" path="res://assets/font.ttf" id="2_wkhis"]
+[ext_resource type="Texture2D" uid="uid://cfyt8lnv01f1k" path="res://assets/key.png" id="5_0eqao"]
 
 [sub_resource type="Theme" id="Theme_n28cg"]
 
 [node name="HUD" type="CanvasLayer"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="coin_icon" type="TextureRect" parent="."]
 light_mask = 512
 visibility_layer = 512
 texture_filter = 1
 texture_repeat = 1
-offset_left = 3.0
-offset_top = -2.0
-offset_right = 176.0
-offset_bottom = 171.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 174.0
+offset_bottom = 174.0
+grow_vertical = 2
 texture = ExtResource("1_om6rg")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="coin_amount" type="RichTextLabel" parent="."]
 light_mask = 512
 visibility_layer = 512
 texture_filter = 1
 texture_repeat = 1
-offset_left = 182.0
-offset_top = 34.0
-offset_right = 467.0
-offset_bottom = 149.0
+offset_left = 167.0
+offset_top = 30.0
+offset_right = 452.0
+offset_bottom = 145.0
+grow_vertical = 2
+theme = SubResource("Theme_n28cg")
+theme_override_fonts/normal_font = ExtResource("2_wkhis")
+theme_override_font_sizes/mono_font_size = 1
+theme_override_font_sizes/normal_font_size = 108
+text = "0"
+scroll_active = false
+
+[node name="key_icon" type="TextureRect" parent="."]
+light_mask = 512
+visibility_layer = 512
+texture_filter = 1
+texture_repeat = 1
+offset_top = 114.0
+offset_right = 173.0
+offset_bottom = 287.0
+grow_vertical = 2
+texture = ExtResource("5_0eqao")
+
+[node name="key_amount" type="RichTextLabel" parent="."]
+light_mask = 512
+visibility_layer = 512
+texture_filter = 1
+texture_repeat = 1
+offset_left = 167.0
+offset_top = 157.0
+offset_right = 452.0
+offset_bottom = 272.0
+grow_vertical = 2
 theme = SubResource("Theme_n28cg")
 theme_override_fonts/normal_font = ExtResource("2_wkhis")
 theme_override_font_sizes/mono_font_size = 1

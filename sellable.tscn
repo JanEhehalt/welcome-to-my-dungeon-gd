@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://blf0sco11lwii"]
+
+[ext_resource type="PackedScene" uid="uid://c48boue3byrbp" path="res://tool_tip.tscn" id="1_joxnx"]
+[ext_resource type="Script" path="res://sellable.gd" id="1_l1rdu"]
+[ext_resource type="Texture2D" uid="uid://cfyt8lnv01f1k" path="res://assets/key.png" id="2_c3nxd"]
+[ext_resource type="Texture2D" uid="uid://bvfv8ivj2khm" path="res://assets/pricetags.png" id="4_rh2r4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_oxkyj"]
+radius = 11.0
+height = 34.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qy2qa"]
+atlas = ExtResource("4_rh2r4")
+region = Rect2(0, 0, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8sose"]
+atlas = ExtResource("4_rh2r4")
+region = Rect2(0, 48, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbah0"]
+atlas = ExtResource("4_rh2r4")
+region = Rect2(0, 16, 48, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sy050"]
+atlas = ExtResource("4_rh2r4")
+region = Rect2(0, 32, 48, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n7gy7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qy2qa")
+}],
+"loop": false,
+"name": &"1",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8sose")
+}],
+"loop": true,
+"name": &"10",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbah0")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sy050")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[node name="sellable" type="Node2D"]
+texture_filter = 1
+position = Vector2(0, -6)
+script = ExtResource("1_l1rdu")
+texture = ExtResource("2_c3nxd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="ToolTip" parent="." instance=ExtResource("1_joxnx")]
+offset_left = 11.0
+offset_top = -12.0
+offset_right = 11.0
+offset_bottom = -12.0
+metadata/_edit_use_anchors_ = true
+
+[node name="SellableArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SellableArea"]
+position = Vector2(0, 5)
+shape = SubResource("CapsuleShape2D_oxkyj")
+
+[node name="PriceTag2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7.10543e-15, 12)
+scale = Vector2(0.296875, 0.296875)
+sprite_frames = SubResource("SpriteFrames_n7gy7")
+animation = &"1"

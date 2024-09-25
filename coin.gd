@@ -41,7 +41,7 @@ func _process(delta: float) -> void:
 		if object.has_method("player"):
 			object.pick_up_coin(value)
 			disabled = true
-			$AudioStreamPlayer2D.pitch_scale = 2
+			$AudioStreamPlayer2D.pitch_scale = 2/value
 			$AudioStreamPlayer2D.stream = pickup_coin_sound
 			$AudioStreamPlayer2D.play()
 			return

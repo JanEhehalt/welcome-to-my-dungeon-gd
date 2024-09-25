@@ -9,6 +9,9 @@ var swing_sound_3 = preload("res://assets/sounds/swing3.wav")
 @export var BASE_DMG = 2
 var dmg = BASE_DMG
 
+@export var BASE_HP = 10
+var hp = BASE_HP
+
 var speed: float = 0
 
 func player():
@@ -23,8 +26,9 @@ func set_speed_multiplier(multiplier):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	$HUD/RichTextLabel.text = str(coin_counter)
-		
+	$HUD/coin_amount.text = str(coin_counter)
+	$HUD/key_amount.text = str(key_counter)
+	
 	var movement = Vector2(0, 0)
 	movement.x = Input.get_axis("move_left", "move_right")
 	movement.y = Input.get_axis("move_up", "move_down")
@@ -36,13 +40,13 @@ func _process(delta: float) -> void:
 		manage_flip(false)
 	
 	if movement.length() > 0:
-		$AnimatedSprite2D.play_anim("walk")
+		$AnimatedSprite2D.play_anim("player_walk")
 	else:
-		$AnimatedSprite2D.play_anim("idle")
+		$AnimatedSprite2D.play_anim("player_idle")
 	if Input.is_key_pressed(KEY_SPACE):
-		if $AnimatedSprite2D.animation != "hit":
-			$AnimatedSprite2D.play_anim("hit")
-			if $AnimatedSprite2D.animation == "hit":
+		if $AnimatedSprite2D.animation != "player_hit":
+			$AnimatedSprite2D.play_anim("player_hit")
+			if $AnimatedSprite2D.animation == "player_hit":
 				$AudioStreamPlayer2D.stop()
 				match randi()%3:
 					0: $AudioStreamPlayer2D.stream = swing_sound_1
@@ -51,7 +55,7 @@ func _process(delta: float) -> void:
 				$AudioStreamPlayer2D.play()
 
 func manage_flip(flip: bool):
-	if $AnimatedSprite2D.animation == "hit" or Input.is_key_pressed(KEY_SPACE):
+	if $AnimatedSprite2D.animation == "player_hit" or Input.is_key_pressed(KEY_SPACE):
 		return
 	if flip != $AnimatedSprite2D.flip_h:
 		$AnimatedSprite2D.flip_h = flip
@@ -67,12 +71,16 @@ func hit_other_entities():
 				object.handle_player_hit(false, dmg)
 
 @export var coin_counter: int = 0
+@export var key_counter: int = 0
 
 func pick_up_coin(value: int):
 	coin_counter += value
+
+func pick_up_key():
+	key_counter += 1
 
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 func get_hit(dmg: int):
-	$AnimatedSprite2D.play_anim("hurt")
+	$AnimatedSprite2D.play_anim("player_hurt")
