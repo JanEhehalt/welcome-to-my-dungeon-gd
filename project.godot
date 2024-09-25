@@ -14,6 +14,8 @@ config/name="welcome-to-my-dungeon-gd"
 run/main_scene="res://room.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+config/macos_native_icon="res://icon.svg"
+config/windows_native_icon="res://icon.svg"
 
 [input]
 
@@ -45,3 +47,7 @@ move_down={
 , Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
 ]
 }
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

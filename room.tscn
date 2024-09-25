@@ -1,6 +1,7 @@
-[gd_scene load_steps=27 format=4 uid="uid://o2uu1nfacirp"]
+[gd_scene load_steps=28 format=4 uid="uid://o2uu1nfacirp"]
 
 [ext_resource type="PackedScene" uid="uid://c0o182ryqx5ah" path="res://player.tscn" id="1_8kfyj"]
+[ext_resource type="Script" path="res://room.gd" id="1_lipl8"]
 [ext_resource type="TileSet" uid="uid://dtpifdup8cgjf" path="res://assets/room.tres" id="1_qtt35"]
 [ext_resource type="Script" path="res://shop.gd" id="3_qbf7f"]
 [ext_resource type="Texture2D" uid="uid://bpxumovgbba16" path="res://assets/light.png" id="3_x2b2x"]
@@ -52,8 +53,12 @@ size = Vector2(170, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c8e8"]
 size = Vector2(11.5, 203)
 
-[node name="Room" type="Node2D"]
+[node name="Room" type="Node2D" node_paths=PackedStringArray("knock_left_torch", "knock_right_torch", "player")]
 position = Vector2(-243, 177)
+script = ExtResource("1_lipl8")
+knock_left_torch = NodePath("Entities/Torch6")
+knock_right_torch = NodePath("Entities/Torch5")
+player = NodePath("Entities/Player")
 
 [node name="TiledMapLayersBelowEntities" type="Node2D" parent="."]
 light_mask = 1023

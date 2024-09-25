@@ -59,9 +59,13 @@ func handle_player_hit(from_left: bool, dmg: int):
 		$AnimatedSprite2D.animation = "shake"
 		$AnimatedSprite2D.frame = 0
 
+var fell = false
+var fell_left = false
 func fall(from_left: bool):
+	fell = true
 	if $AnimatedSprite2D.animation == "fall":
 		return
+	fell_left = !from_left
 	if from_left:
 		$AnimatedSprite2D.flip_h = true
 		$StandingCollisionShape.position.x *= -1

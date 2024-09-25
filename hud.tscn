@@ -64,3 +64,55 @@ theme_override_font_sizes/mono_font_size = 1
 theme_override_font_sizes/normal_font_size = 108
 text = "0"
 scroll_active = false
+
+[node name="Controls" type="RichTextLabel" parent="."]
+light_mask = 512
+visibility_layer = 512
+texture_filter = 1
+texture_repeat = 1
+offset_left = 6.0
+offset_top = 1959.0
+offset_right = 4019.0
+offset_bottom = 2703.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = SubResource("Theme_n28cg")
+theme_override_colors/default_color = Color(0.65834, 0.65834, 0.65834, 1)
+theme_override_fonts/normal_font = ExtResource("2_wkhis")
+theme_override_font_sizes/mono_font_size = 1
+theme_override_font_sizes/normal_font_size = 108
+text = "WASD: Move
+SPACE: Attack
+E: Interact
+
+Your Goal is to softlock yourself. "
+scroll_active = false
+
+[node name="locked_rect" type="ColorRect" parent="."]
+visible = false
+offset_left = 460.0
+offset_top = 1513.0
+offset_right = 4166.0
+offset_bottom = 2616.0
+color = Color(0.12549, 0.12549, 0.12549, 0.541176)
+
+[node name="locked" type="RichTextLabel" parent="."]
+visible = false
+light_mask = 512
+visibility_layer = 512
+texture_filter = 1
+texture_repeat = 1
+offset_left = 584.0
+offset_top = 1592.0
+offset_right = 6864.0
+offset_bottom = 3390.0
+theme = SubResource("Theme_n28cg")
+theme_override_fonts/normal_font = ExtResource("2_wkhis")
+theme_override_font_sizes/mono_font_size = 1
+theme_override_font_sizes/normal_font_size = 164
+text = "You successfully softlocked yourself.
+Currently this is the only way 
+of \"beating\" the game.
+More softlocks will follow.
+GG WP"
+scroll_active = false

@@ -258,7 +258,7 @@ script = ExtResource("1_rp82f")
 coin_counter = 100
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(3.75, 3.75)
+zoom = Vector2(5.005, 5.005)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
