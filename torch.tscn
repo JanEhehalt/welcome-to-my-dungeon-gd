@@ -152,7 +152,7 @@ script = ExtResource("1_dkc4o")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-7.62939e-06, -7.00001)
 scale = Vector2(0.417969, 0.417969)
-color = Color(0.65834, 0.549337, 1.54018e-06, 1)
+color = Color(0.796492, 0.502879, 7.70092e-07, 1)
 texture = ExtResource("2_ybvj8")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

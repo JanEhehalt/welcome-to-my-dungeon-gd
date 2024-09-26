@@ -12,6 +12,8 @@ func _ready() -> void:
 	$AnimatedSprite2D.animation_finished.connect(_on_animation_finished)
 	$AudioStreamPlayer2D.stream = burning_sound
 	$AudioStreamPlayer2D.play()
+	var frame_offset = randi_range(0, 3)
+	$AnimatedSprite2D.frame = frame_offset
 	
 func _on_frame_changed():
 	if $AnimatedSprite2D.animation == "fall":
@@ -48,7 +50,7 @@ func _process(delta: float) -> void:
 
 var hit_counter = 0
 
-func handle_player_hit(from_left: bool, dmg: int):
+func handle_hit(from_left: bool, dmg: int):
 	$AudioStreamPlayer2D.stop()
 	$AudioStreamPlayer2D.stream = hit_metal_sound
 	$AudioStreamPlayer2D.play()

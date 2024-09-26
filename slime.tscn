@@ -328,6 +328,7 @@ radius = 14.0
 height = 42.0
 
 [node name="Slime" type="CharacterBody2D"]
+motion_mode = 1
 script = ExtResource("1_icm18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

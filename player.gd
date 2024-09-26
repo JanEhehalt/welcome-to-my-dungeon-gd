@@ -14,6 +14,7 @@ var hp = BASE_HP
 
 var speed: float = 0
 
+
 func player():
 	pass
 
@@ -26,8 +27,13 @@ func set_speed_multiplier(multiplier):
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	hp = min(BASE_HP, hp)
+	hp = max(hp, 0)
+	$HUD/hp_bar.frame = int(hp)
 	$HUD/coin_amount.text = str(coin_counter)
 	$HUD/key_amount.text = str(key_counter)
+	$HUD/bomb_amount.text = str(bomb_counter)
+	bomb_countdown = max(0, bomb_countdown - delta)
 	
 	var movement = Vector2(0, 0)
 	movement.x = Input.get_axis("move_left", "move_right")
@@ -53,6 +59,8 @@ func _process(delta: float) -> void:
 					1: $AudioStreamPlayer2D.stream = swing_sound_2
 					2: $AudioStreamPlayer2D.stream = swing_sound_3
 				$AudioStreamPlayer2D.play()
+	if Input.is_key_pressed(KEY_Q):
+		place_bomb()
 
 func manage_flip(flip: bool):
 	if $AnimatedSprite2D.animation == "player_hit" or Input.is_key_pressed(KEY_SPACE):
@@ -64,14 +72,15 @@ func manage_flip(flip: bool):
 
 func hit_other_entities():
 	for object in $SwordArea.get_overlapping_bodies():
-		if object.has_method("handle_player_hit"):
+		if object.has_method("handle_hit"):
 			if position.x <= object.position.x:
-				object.handle_player_hit(true, dmg)
+				object.handle_hit(true, dmg)
 			else:
-				object.handle_player_hit(false, dmg)
+				object.handle_hit(false, dmg)
 
 @export var coin_counter: int = 0
 @export var key_counter: int = 0
+@export var bomb_counter: int = 0
 
 func pick_up_coin(value: int):
 	coin_counter += value
@@ -79,8 +88,27 @@ func pick_up_coin(value: int):
 func pick_up_key():
 	key_counter += 1
 
+func pick_up_bomb():
+	bomb_counter += 1
+	
+var bomb_countdown = 0
+func place_bomb():
+	if bomb_countdown == 0 and bomb_counter > 0:
+		bomb_countdown = 0.5
+		bomb_counter -= 1
+		var bomb = load("res://bomb.tscn") as PackedScene
+		var new_bomb = bomb.instantiate() as Node2D
+		var offset = Vector2()
+		if velocity.y > 0:
+			offset.y = -5
+		else:
+			offset.y = 5
+		new_bomb.position = position + offset
+		get_parent().add_child(new_bomb)
+
 func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
-func get_hit(dmg: int):
+func handle_hit(from_left: bool, dmg: int):
+	hp -= dmg
 	$AnimatedSprite2D.play_anim("player_hurt")

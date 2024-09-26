@@ -1,10 +1,97 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnrig6ps7xcd4"]
+[gd_scene load_steps=19 format=3 uid="uid://dnrig6ps7xcd4"]
 
 [ext_resource type="Texture2D" uid="uid://cd10gyk318chn" path="res://assets/single_coin.png" id="1_om6rg"]
 [ext_resource type="FontFile" uid="uid://mqcyu0ndi4y3" path="res://assets/font.ttf" id="2_wkhis"]
+[ext_resource type="Texture2D" uid="uid://c7fheu32nvpwn" path="res://assets/single_bomb.png" id="4_hdtst"]
 [ext_resource type="Texture2D" uid="uid://cfyt8lnv01f1k" path="res://assets/key.png" id="5_0eqao"]
+[ext_resource type="Texture2D" uid="uid://cbf1q8taytdae" path="res://assets/Hp_bar.png" id="5_ny7o7"]
 
 [sub_resource type="Theme" id="Theme_n28cg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nc2dk"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 130, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxg6o"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 117, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0gnj"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 104, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kfr25"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 91, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhjoo"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 78, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dupj"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 65, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hupfi"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 52, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eoivi"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 39, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87fj6"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 26, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om5jg"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 13, 64, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85tpj"]
+atlas = ExtResource("5_ny7o7")
+region = Rect2(0, 0, 64, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_il73b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nc2dk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxg6o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0gnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kfr25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhjoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4dupj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hupfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eoivi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87fj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om5jg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85tpj")
+}],
+"loop": false,
+"name": &"default",
+"speed": 0.0
+}]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -13,11 +100,10 @@ light_mask = 512
 visibility_layer = 512
 texture_filter = 1
 texture_repeat = 1
-offset_left = 1.0
-offset_top = 1.0
-offset_right = 174.0
-offset_bottom = 174.0
-grow_vertical = 2
+offset_left = 24.0
+offset_top = 207.0
+offset_right = 150.0
+offset_bottom = 333.0
 texture = ExtResource("1_om6rg")
 
 [node name="coin_amount" type="RichTextLabel" parent="."]
@@ -26,10 +112,9 @@ visibility_layer = 512
 texture_filter = 1
 texture_repeat = 1
 offset_left = 167.0
-offset_top = 30.0
+offset_top = 213.0
 offset_right = 452.0
-offset_bottom = 145.0
-grow_vertical = 2
+offset_bottom = 328.0
 theme = SubResource("Theme_n28cg")
 theme_override_fonts/normal_font = ExtResource("2_wkhis")
 theme_override_font_sizes/mono_font_size = 1
@@ -42,10 +127,10 @@ light_mask = 512
 visibility_layer = 512
 texture_filter = 1
 texture_repeat = 1
-offset_top = 114.0
-offset_right = 173.0
-offset_bottom = 287.0
-grow_vertical = 2
+offset_left = 12.0
+offset_top = 309.0
+offset_right = 157.0
+offset_bottom = 454.0
 texture = ExtResource("5_0eqao")
 
 [node name="key_amount" type="RichTextLabel" parent="."]
@@ -54,15 +139,60 @@ visibility_layer = 512
 texture_filter = 1
 texture_repeat = 1
 offset_left = 167.0
-offset_top = 157.0
+offset_top = 340.0
 offset_right = 452.0
-offset_bottom = 272.0
-grow_vertical = 2
+offset_bottom = 455.0
 theme = SubResource("Theme_n28cg")
 theme_override_fonts/normal_font = ExtResource("2_wkhis")
 theme_override_font_sizes/mono_font_size = 1
 theme_override_font_sizes/normal_font_size = 108
 text = "0"
+scroll_active = false
+
+[node name="bomb_icon" type="TextureRect" parent="."]
+light_mask = 512
+visibility_layer = 512
+texture_filter = 1
+texture_repeat = 1
+offset_left = 22.0
+offset_top = 450.0
+offset_right = 165.0
+offset_bottom = 587.0
+texture = ExtResource("4_hdtst")
+
+[node name="bomb_amount" type="RichTextLabel" parent="."]
+light_mask = 512
+visibility_layer = 512
+texture_filter = 1
+texture_repeat = 1
+offset_left = 167.0
+offset_top = 468.0
+offset_right = 452.0
+offset_bottom = 583.0
+theme = SubResource("Theme_n28cg")
+theme_override_fonts/normal_font = ExtResource("2_wkhis")
+theme_override_font_sizes/mono_font_size = 1
+theme_override_font_sizes/normal_font_size = 108
+text = "0"
+scroll_active = false
+
+[node name="Version_number" type="RichTextLabel" parent="."]
+light_mask = 512
+visibility_layer = 512
+texture_filter = 1
+texture_repeat = 1
+offset_left = 3897.0
+offset_top = 2343.0
+offset_right = 4685.0
+offset_bottom = 2559.0
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme = SubResource("Theme_n28cg")
+theme_override_colors/default_color = Color(0.658824, 0.658824, 0.658824, 0.509804)
+theme_override_fonts/normal_font = ExtResource("2_wkhis")
+theme_override_font_sizes/mono_font_size = 1
+theme_override_font_sizes/normal_font_size = 108
+text = "beta-0.2"
 scroll_active = false
 
 [node name="Controls" type="RichTextLabel" parent="."]
@@ -71,7 +201,7 @@ visibility_layer = 512
 texture_filter = 1
 texture_repeat = 1
 offset_left = 6.0
-offset_top = 1959.0
+offset_top = 1872.0
 offset_right = 4019.0
 offset_bottom = 2703.0
 size_flags_horizontal = 0
@@ -84,6 +214,7 @@ theme_override_font_sizes/normal_font_size = 108
 text = "WASD: Move
 SPACE: Attack
 E: Interact
+Q: Bomb
 
 Your Goal is to softlock yourself. "
 scroll_active = false
@@ -116,3 +247,9 @@ of \"beating\" the game.
 More softlocks will follow.
 GG WP"
 scroll_active = false
+
+[node name="hp_bar" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(464, 104)
+scale = Vector2(13.3462, 13.3462)
+sprite_frames = SubResource("SpriteFrames_il73b")

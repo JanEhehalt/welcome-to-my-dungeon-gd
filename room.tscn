@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=4 uid="uid://o2uu1nfacirp"]
+[gd_scene load_steps=32 format=4 uid="uid://o2uu1nfacirp"]
 
 [ext_resource type="PackedScene" uid="uid://c0o182ryqx5ah" path="res://player.tscn" id="1_8kfyj"]
 [ext_resource type="Script" path="res://room.gd" id="1_lipl8"]
@@ -7,16 +7,17 @@
 [ext_resource type="Texture2D" uid="uid://bpxumovgbba16" path="res://assets/light.png" id="3_x2b2x"]
 [ext_resource type="PackedScene" uid="uid://dhhhfbrr23cwv" path="res://torch.tscn" id="4_opr2y"]
 [ext_resource type="PackedScene" uid="uid://c1vmxsuuotp4f" path="res://chest.tscn" id="5_mb7n4"]
-[ext_resource type="PackedScene" uid="uid://bdfddbie42h5e" path="res://coin.tscn" id="6_el8uc"]
+[ext_resource type="Texture2D" uid="uid://c7fheu32nvpwn" path="res://assets/single_bomb.png" id="6_hg0dl"]
 [ext_resource type="PackedScene" uid="uid://pd705fts2lv" path="res://destructible_door.tscn" id="7_an8mx"]
 [ext_resource type="PackedScene" uid="uid://cy6jwk7fyyfh6" path="res://slime.tscn" id="8_i7i3q"]
 [ext_resource type="PackedScene" uid="uid://b2d6mdjbiloqh" path="res://shop_owner.tscn" id="9_bomcr"]
 [ext_resource type="PackedScene" uid="uid://blf0sco11lwii" path="res://sellable.tscn" id="10_cm4u7"]
 [ext_resource type="Texture2D" uid="uid://cosckhs5t2ykt" path="res://assets/big_potion.png" id="11_e7wk0"]
 [ext_resource type="Texture2D" uid="uid://cmrw1ffsv7xju" path="res://assets/small_potion.png" id="12_piuqq"]
+[ext_resource type="PackedScene" uid="uid://bfjejtvpaw7pe" path="res://bomb.tscn" id="15_fhpuu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqjbu"]
-size = Vector2(231, 155)
+size = Vector2(231, 151)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fqk06"]
 
@@ -53,11 +54,21 @@ size = Vector2(170, 25)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5c8e8"]
 size = Vector2(11.5, 203)
 
-[node name="Room" type="Node2D" node_paths=PackedStringArray("knock_left_torch", "knock_right_torch", "player")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4d5s2"]
+size = Vector2(143, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sfrse"]
+size = Vector2(57, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlg40"]
+size = Vector2(231, 125)
+
+[node name="Room" type="Node2D" node_paths=PackedStringArray("knock_left_torch", "knock_right_torch", "shop_area", "player")]
 position = Vector2(-243, 177)
 script = ExtResource("1_lipl8")
 knock_left_torch = NodePath("Entities/Torch6")
 knock_right_torch = NodePath("Entities/Torch5")
+shop_area = NodePath("Softlock_Areas/shop_0")
 player = NodePath("Entities/Player")
 
 [node name="TiledMapLayersBelowEntities" type="Node2D" parent="."]
@@ -93,25 +104,42 @@ color = Color(0.391576, 0.418624, 0.58519, 1)
 
 [node name="Lights" type="Node2D" parent="."]
 
-[node name="MoonLight" type="PointLight2D" parent="Lights"]
-visible = false
-position = Vector2(243, -174)
-scale = Vector2(1.62891, 1)
-color = Color(0.580304, 0.670444, 0.759903, 1)
-energy = 0.6
+[node name="WarmLight" type="PointLight2D" parent="Lights"]
+position = Vector2(93, -341)
+scale = Vector2(0.890625, 0.570313)
+color = Color(0.678579, 0.522769, 0.174074, 1)
+energy = 0.2
 texture = ExtResource("3_x2b2x")
 
-[node name="shop_0" type="Node2D" parent="." node_paths=PackedStringArray("player")]
+[node name="MoonLight2" type="PointLight2D" parent="Lights"]
+position = Vector2(328.855, -323)
+scale = Vector2(0.866951, 0.505432)
+color = Color(0.580304, 0.670444, 0.759903, 1)
+energy = 0.2
+texture = ExtResource("3_x2b2x")
+
+[node name="MoonLight" type="PointLight2D" parent="Lights"]
+position = Vector2(257.5, -158)
+scale = Vector2(1.44141, 0.710938)
+color = Color(0.580304, 0.670444, 0.759903, 1)
+energy = 0.2
+texture = ExtResource("3_x2b2x")
+
+[node name="shop_0" type="Node2D" parent="." node_paths=PackedStringArray("player", "shop_owner")]
 position = Vector2(-11.86, 0)
 script = ExtResource("3_qbf7f")
 player = NodePath("../Entities/Player")
+shop_owner = NodePath("../Entities/shop_owner")
+default_db = -25
+min_db = -100
+db_reduction_per_second = 100
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="shop_0"]
 
 [node name="shop_area" type="Area2D" parent="shop_0"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="shop_0/shop_area"]
-position = Vector2(105.36, -324.5)
+position = Vector2(105.36, -326.5)
 shape = SubResource("RectangleShape2D_fqjbu")
 debug_color = Color(0.741176, 0.215686, 1, 0.0784314)
 
@@ -121,31 +149,42 @@ debug_color = Color(0.741176, 0.215686, 1, 0.0784314)
 position = Vector2(46.11, -362)
 
 [node name="point1" type="Node2D" parent="shop_0/movement_points"]
-position = Vector2(104.86, -344)
+position = Vector2(108.86, -350)
 
 [node name="point2" type="Node2D" parent="shop_0/movement_points"]
 position = Vector2(172.86, -361)
 
 [node name="sellables" type="Node2D" parent="shop_0"]
 
-[node name="sellable2" parent="shop_0/sellables" node_paths=PackedStringArray("player") instance=ExtResource("10_cm4u7")]
-position = Vector2(140.86, -345)
+[node name="sellable3" parent="shop_0/sellables" node_paths=PackedStringArray("player", "shop_owner") instance=ExtResource("10_cm4u7")]
+position = Vector2(158.86, -346)
+texture = ExtResource("6_hg0dl")
+price = 5
+restock = true
+player = NodePath("../../../Entities/Player")
+shop_owner = NodePath("../../../Entities/shop_owner")
+
+[node name="sellable2" parent="shop_0/sellables" node_paths=PackedStringArray("player", "shop_owner") instance=ExtResource("10_cm4u7")]
+position = Vector2(126.715, -346)
 texture = ExtResource("11_e7wk0")
 price = 5
 restock = true
 player = NodePath("../../../Entities/Player")
+shop_owner = NodePath("../../../Entities/shop_owner")
 
-[node name="sellable1" parent="shop_0/sellables" node_paths=PackedStringArray("player") instance=ExtResource("10_cm4u7")]
-position = Vector2(103.86, -346)
+[node name="sellable1" parent="shop_0/sellables" node_paths=PackedStringArray("player", "shop_owner") instance=ExtResource("10_cm4u7")]
+position = Vector2(95.275, -346)
 texture = ExtResource("12_piuqq")
 price = 2
 restock = true
 player = NodePath("../../../Entities/Player")
+shop_owner = NodePath("../../../Entities/shop_owner")
 
-[node name="sellable0" parent="shop_0/sellables" node_paths=PackedStringArray("player") instance=ExtResource("10_cm4u7")]
+[node name="sellable0" parent="shop_0/sellables" node_paths=PackedStringArray("player", "shop_owner") instance=ExtResource("10_cm4u7")]
 position = Vector2(62.86, -346)
 price = 10
 player = NodePath("../../../Entities/Player")
+shop_owner = NodePath("../../../Entities/shop_owner")
 
 [node name="Entities" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -168,45 +207,6 @@ position = Vector2(123, -205)
 [node name="Chest" parent="Entities" instance=ExtResource("5_mb7n4")]
 position = Vector2(211, -211)
 
-[node name="Coin" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(191, -166)
-
-[node name="Coin2" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(188, -136)
-
-[node name="Coin3" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(171, -144)
-
-[node name="Coin4" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(170, -163)
-
-[node name="Coin5" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(151, -128)
-
-[node name="Coin6" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(176, -123)
-
-[node name="Coin7" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(202, -127)
-
-[node name="Coin8" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(180, -169)
-
-[node name="Coin9" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(166, -133)
-
-[node name="Coin10" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(232, -122)
-
-[node name="Coin11" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(339, -152)
-
-[node name="Coin12" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(328, -204)
-
-[node name="Coin13" parent="Entities" instance=ExtResource("6_el8uc")]
-position = Vector2(184, -167)
-
 [node name="DestructibleDoor" parent="Entities" instance=ExtResource("7_an8mx")]
 position = Vector2(344, -248)
 
@@ -220,7 +220,7 @@ position = Vector2(273, -340)
 position = Vector2(407, -299)
 
 [node name="Slime4" parent="Entities" instance=ExtResource("8_i7i3q")]
-position = Vector2(332, -354)
+position = Vector2(337, -353)
 
 [node name="DestructibleDoor2" parent="Entities" instance=ExtResource("7_an8mx")]
 position = Vector2(136, -248)
@@ -231,9 +231,18 @@ position = Vector2(124, -277)
 [node name="Torch6" parent="Entities" instance=ExtResource("4_opr2y")]
 position = Vector2(148, -277)
 
+[node name="Torch7" parent="Entities" instance=ExtResource("4_opr2y")]
+position = Vector2(32, -346)
+
+[node name="Torch8" parent="Entities" instance=ExtResource("4_opr2y")]
+position = Vector2(162, -346)
+
 [node name="shop_owner" parent="Entities" instance=ExtResource("9_bomcr")]
 position = Vector2(92, -375)
 HP_BASE = 4
+
+[node name="Bomb" parent="Entities" instance=ExtResource("15_fhpuu")]
+position = Vector2(264, -205)
 
 [node name="TiledMapLayersAboveEntities" type="Node2D" parent="."]
 
@@ -307,3 +316,22 @@ debug_color = Color(0, 0.6, 0, 0.133333)
 position = Vector2(-28, -343)
 shape = SubResource("RectangleShape2D_5c8e8")
 debug_color = Color(0, 0.6, 0, 0.133333)
+
+[node name="Softlock_Areas" type="Node2D" parent="."]
+
+[node name="shop_0" type="Area2D" parent="Softlock_Areas"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Softlock_Areas/shop_0"]
+position = Vector2(49.5, -271.5)
+shape = SubResource("RectangleShape2D_4d5s2")
+debug_color = Color(4.62055e-06, 0.587155, 0.76448, 0.137255)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Softlock_Areas/shop_0"]
+position = Vector2(180.5, -272)
+shape = SubResource("RectangleShape2D_sfrse")
+debug_color = Color(4.62055e-06, 0.587155, 0.76448, 0.137255)
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Softlock_Areas/shop_0"]
+position = Vector2(93.5, -339.5)
+shape = SubResource("RectangleShape2D_xlg40")
+debug_color = Color(4.62055e-06, 0.587155, 0.76448, 0.137255)

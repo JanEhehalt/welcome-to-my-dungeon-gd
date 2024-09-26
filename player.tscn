@@ -254,8 +254,12 @@ polygon = PackedVector2Array(-3, 7, 0.333202, 7, 4, 7, 4, 5, -3, 5)
 texture_filter = 1
 texture_repeat = 1
 position = Vector2(0, -7)
+motion_mode = 1
 script = ExtResource("1_rp82f")
+BASE_MOVEMENT_SPEED = 80
 coin_counter = 100
+key_counter = 10
+bomb_counter = 10
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(5.005, 5.005)

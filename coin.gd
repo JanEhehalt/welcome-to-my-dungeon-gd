@@ -13,6 +13,7 @@ var pickup_coin_sound = preload("res://assets/pickup_coin.ogg")
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$AnimatedSprite2D.animation = str(value)
+	$AudioStreamPlayer2D.finished.connect(_handle_sound_finish)
 	if value == 1:
 		$Shadow.apply_scale(Vector2(0.6, 0.6))
 
@@ -25,7 +26,15 @@ var start_rng = randi_range(1, 5)
 func hover():
 	$AnimatedSprite2D.position.y += cos(start_rng + timer*5) * 0.2
 
+var finished_playing = false
+
+func _handle_sound_finish():
+	finished_playing = true
+
 func _process(delta: float) -> void:
+	if disabled and finished_playing:
+		get_parent().remove_child(self)
+		return
 	if disabled:
 		visible = false
 		return

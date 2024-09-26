@@ -15,7 +15,7 @@ var attack_cooldown = 0
 var FLIP_COOLDOWN_BASE = 0.3
 var flip_cooldown = 0
 
-@export var HP_BASE = 10
+@export var HP_BASE = 5
 var hp = HP_BASE 
 
 @export var HEAVY_ATTACK_BASE_CHANCE = 0.1
@@ -90,12 +90,12 @@ func hit_other_entities():
 		for entity in $AttackArea.get_overlapping_bodies():
 			if entity.has_method("player"):
 				entity = entity as CharacterBody2D
-				entity.get_hit(1)
+				entity.handle_hit(entity.position.x > position.x, 1)
 	if $AnimatedSprite2D.animation == "slime_heavy_hit":
 		for entity in $HeavyAttackArea.get_overlapping_bodies():
 			if entity.has_method("player"):
 				entity = entity as CharacterBody2D
-				entity.get_hit(3)
+				entity.handle_hit(entity.position.x > position.x, 2)
 	
 
 func manage_flip(flip: bool):
@@ -109,7 +109,7 @@ func manage_flip(flip: bool):
 		$HeavyAttackArea/CollisionShape2D.position.x *= -1
 		$PlayerTargetArea/CollisionShape2D.position.x *= -1
 
-func handle_player_hit(from_left: bool, dmg: int):
+func handle_hit(from_left: bool, dmg: int):
 	heavy_attack_chance += HEAVY_ATTACK_CHANCE_INCREASE_PER_HIT
 	$AudioStreamPlayer2D.stop()
 	if $AnimatedSprite2D.animation == "slime_heavy_hit":

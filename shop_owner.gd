@@ -3,6 +3,8 @@ extends CharacterBody2D
 #
 # ROOM
 #	|- SHOP_ID
+#		|- AudioStreamPlayer2D
+#		|- shop_area
 #		|- MOVEMENT_POINTS
 #			|- point1
 #			|- point2
@@ -13,6 +15,7 @@ extends CharacterBody2D
 #		|- player
 #		|- shop_owner
 
+var die_sound = preload("res://assets/sounds/extinguish.wav")
 
 @export var BASE_MOVEMENT_SPEED = 20.0
 var speed = BASE_MOVEMENT_SPEED
@@ -25,7 +28,7 @@ var shop_area: Area2D = null
 
 var movement_target_point: Vector2 = Vector2()
 
-@export var HP_BASE = 3
+@export var HP_BASE = 5
 var hp = HP_BASE 
 
 @export var SHOP_ID = 0
@@ -92,12 +95,18 @@ func _process(delta: float) -> void:
 func manage_flip(flip: bool):
 	$AnimatedSprite2D.flip_h = flip
 
-func handle_player_hit(from_left: bool, dmg: int):
+func handle_hit(from_left: bool, dmg: int):
 	hp -= dmg
+	$AudioStreamPlayer2D.stream = die_sound
 	if hp <= 0:
 		$AnimatedSprite2D.play_anim("shop_owner_die")
+		for sellable in shop.get_node("sellables").get_children():
+			sellable.delete()
+		$AudioStreamPlayer2D.pitch_scale = 0.4
 	else:
+		$AudioStreamPlayer2D.pitch_scale = 1.3
 		$AnimatedSprite2D.play_anim("shop_owner_hurt")
+	$AudioStreamPlayer2D.play()
 
 func set_speed_multiplier(multiplier: float):
 	speed = BASE_MOVEMENT_SPEED * multiplier
