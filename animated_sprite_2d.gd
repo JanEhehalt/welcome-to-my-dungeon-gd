@@ -18,7 +18,13 @@ var animation_informations = {
 	"shop_owner_idle": AnimationInformation.new("shop_owner_idle", false, true, "shop_owner_idle", 1),
 	"shop_owner_walk": AnimationInformation.new("shop_owner_walk", false, true, "shop_owner_idle", 1),
 	"shop_owner_die": AnimationInformation.new("shop_owner_die", true, false, "shop_owner_die", 0),
-	"shop_owner_hurt": AnimationInformation.new("shop_owner_hurt", true, false, "shop_owner_idle", 0.8)
+	"shop_owner_hurt": AnimationInformation.new("shop_owner_hurt", true, false, "shop_owner_idle", 0.8),
+	
+	"skeleton_hit": AnimationInformation.new("skeleton_hit", true, false, "skeleton_idle", 0.5),
+	"skeleton_idle": AnimationInformation.new("skeleton_idle", false, true, "skeleton_idle", 1),
+	"skeleton_walk": AnimationInformation.new("skeleton_walk", false, true, "skeleton_idle", 1),
+	"skeleton_die": AnimationInformation.new("skeleton_die", true, false, "skeleton_die", 0),
+	"skeleton_hurt": AnimationInformation.new("skeleton_hurt", true, false, "skeleton_idle", 0.8)
 }
 
 func _ready() -> void:
@@ -34,6 +40,8 @@ func _on_frame_change():
 	if animation == "slime_hit" and frame == 3:
 		get_parent().hit_other_entities()
 	if animation == "slime_heavy_hit" and frame == 8:
+		get_parent().hit_other_entities()
+	if animation == "skeleton_hit" and frame == 6:
 		get_parent().hit_other_entities()
 
 func _on_animation_finished():

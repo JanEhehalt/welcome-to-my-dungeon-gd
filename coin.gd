@@ -56,7 +56,7 @@ func _process(delta: float) -> void:
 			return
 	for object in $AttractionArea.get_overlapping_bodies():
 		if object.has_method("player"):
-			var direction: Vector2 = object.position - position - Vector2(0, -5)
+			var direction: Vector2 = object.global_position - global_position - Vector2(0, -5)
 			direction = direction.normalized() * attractionSpeed
 			velocity = direction
 	move_and_slide()

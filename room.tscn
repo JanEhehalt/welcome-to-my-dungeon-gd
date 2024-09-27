@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://blf0sco11lwii" path="res://sellable.tscn" id="10_cm4u7"]
 [ext_resource type="Texture2D" uid="uid://cosckhs5t2ykt" path="res://assets/big_potion.png" id="11_e7wk0"]
 [ext_resource type="Texture2D" uid="uid://cmrw1ffsv7xju" path="res://assets/small_potion.png" id="12_piuqq"]
-[ext_resource type="PackedScene" uid="uid://bfjejtvpaw7pe" path="res://bomb.tscn" id="15_fhpuu"]
+[ext_resource type="PackedScene" uid="uid://b4wnhledujhxa" path="res://skeleton.tscn" id="16_wjk5s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fqjbu"]
 size = Vector2(231, 151)
@@ -205,7 +205,10 @@ position = Vector2(414, -99)
 position = Vector2(123, -205)
 
 [node name="Chest" parent="Entities" instance=ExtResource("5_mb7n4")]
-position = Vector2(211, -211)
+position = Vector2(321, -371)
+
+[node name="Chest" parent="Entities/Chest" instance=ExtResource("5_mb7n4")]
+position = Vector2(33, 0)
 
 [node name="DestructibleDoor" parent="Entities" instance=ExtResource("7_an8mx")]
 position = Vector2(344, -248)
@@ -215,12 +218,6 @@ position = Vector2(345, -329)
 
 [node name="Slime2" parent="Entities" instance=ExtResource("8_i7i3q")]
 position = Vector2(273, -340)
-
-[node name="Slime3" parent="Entities" instance=ExtResource("8_i7i3q")]
-position = Vector2(407, -299)
-
-[node name="Slime4" parent="Entities" instance=ExtResource("8_i7i3q")]
-position = Vector2(337, -353)
 
 [node name="DestructibleDoor2" parent="Entities" instance=ExtResource("7_an8mx")]
 position = Vector2(136, -248)
@@ -241,8 +238,11 @@ position = Vector2(162, -346)
 position = Vector2(92, -375)
 HP_BASE = 4
 
-[node name="Bomb" parent="Entities" instance=ExtResource("15_fhpuu")]
-position = Vector2(264, -205)
+[node name="Skeleton2" parent="Entities" instance=ExtResource("16_wjk5s")]
+position = Vector2(241, -353)
+
+[node name="Skeleton" parent="Entities" instance=ExtResource("16_wjk5s")]
+position = Vector2(408, -353)
 
 [node name="TiledMapLayersAboveEntities" type="Node2D" parent="."]
 
@@ -260,6 +260,8 @@ tile_set = ExtResource("1_qtt35")
 [node name="Boundaries" type="Node2D" parent="."]
 
 [node name="Walls" type="StaticBody2D" parent="Boundaries"]
+collision_layer = 3
+collision_mask = 3
 physics_material_override = SubResource("PhysicsMaterial_fqk06")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Boundaries/Walls"]

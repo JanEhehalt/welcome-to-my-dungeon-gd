@@ -262,7 +262,7 @@ key_counter = 10
 bomb_counter = 10
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(5.005, 5.005)
+zoom = Vector2(5, 5)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
